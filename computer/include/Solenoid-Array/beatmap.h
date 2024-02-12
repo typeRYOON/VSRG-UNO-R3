@@ -10,8 +10,7 @@
 typedef std::vector<std::vector<std::pair<unsigned int, unsigned int>>> HC;
 
 
-class BeatMap
-{
+class BeatMap {
 private:
     HC hitChart;
     std::string title, artist, creator, version;
