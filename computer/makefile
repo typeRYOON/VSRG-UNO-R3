@@ -1,17 +1,26 @@
-# Build Command                  ::
+# Build Invocation Command       ::
 BUILD = g++ -std=c++23 -O2 -Wall
 
 # Solenoid Array Identifiers     ::
-SRC-01  = Solenoid-Array
-NAME-01 = main
-
-# KPS Display Identifiers        ::
-SRC-02  = KPS-Display
-NAME-02 = main
+SA-SRC-01 = main.cpp
+SA-INC-01 = osuenv.cpp
+SA        = Solenoid-Array
+SA-SRC    = src\$(SA)\$(SA-SRC-01)
+SA-INC    = include\$(SA)\$(SA-INC-01)
 
 # Keystrokes Display Identifiers ::
-SRC-03  = Keystrokes-Display
-NAME-03 = main
+KS-SRC-01 = -1
+KS-INC-01 = -1
+KS        = Keystrokes-Display
+KS-SRC    = src\$(KS)\$(KS-SRC-01)
+KS-INC    = include\$(KS)\$(KS-INC-01)
+
+# KPS Display Identifiers        ::
+KPS-SRC-01 = -1
+KPS-INC-01 = -1
+KPS        = KPS-Display
+KPS-SRC    = src\$(KPS)\$(KPS-SRC-01)
+KPS-INC    = include\$(KPS)\$(KPS-INC-01)
 
 # Windows / UNIX command check   ::
 ifeq ($(OS), Windows_NT)
@@ -23,34 +32,34 @@ else
 endif
 
 # Build Commands ::
-build-01: clean #:: Solenoid Array.
-	@$(BUILD) src\$(SRC-01)\$(NAME-01).cpp -o build\$(SRC-01).exe
+build-SA: clean #:: Solenoid Array.
+	@$(BUILD) $(SA-SRC) $(SA-INC) -o build\$(SA).exe
 	@echo ::
-	@echo Success :: Built $(SRC-01).exe !
+	@echo Success :: Built $(SA).exe !
 
-build-02: clean #:: KPS Display.
-	@$(BUILD) src\$(SRC-02)\$(NAME-02).cpp -o build\$(SRC-02).exe
+build-KS: clean #:: Keystrokes Display.
+	@$(BUILD) $(KS-SRC) -o build\$(KS).exe
 	@echo ::
-	@echo Success :: Built $(SRC-02).exe !
+	@echo Success :: Built $(KS).exe !
 
-build-03: clean #:: Keystrokes Display.
-	@$(BUILD) src\$(SRC-03)\$(NAME-03).cpp -o build\$(SRC-03).exe
+build-KPS: clean #:: KPS Display.
+	@$(BUILD) $(KPS-SRC) -o build\$(KPS).exe
 	@echo ::
-	@echo Success :: Built $(SRC-03).exe !
+	@echo Success :: Built $(KPS).exe !
 
 # Binary Cleaner ::
 clean:
-	@$(RM) build\$(SRC-01).exe
-	@$(RM) build\$(SRC-02).exe
-	@$(RM) build\$(SRC-03).exe
+	@$(RM) build\$(SA).exe
+	@$(RM) build\$(KS).exe
+	@$(RM) build\$(KPS).exe
 	@$(CLS)
 
 # Running Specific Modules ::
-run-01: #:: Solenoid Array.
-	@.\build\$(SRC-01).exe
+run-SA: #:: Solenoid Array.
+	@.\build\$(SA).exe
 
-run-02: #:: KPS Display.
-	@.\build\$(SRC-02).exe
+run-KS: #:: Keystrokes Display.
+	@.\build\$(KS).exe
 
-run-03: #:: Keystrokes Display.
-	@.\build\$(SRC-03).exe
+run-KPS: #:: KPS Display.
+	@.\build\$(KPS).exe
