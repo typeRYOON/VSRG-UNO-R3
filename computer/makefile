@@ -4,9 +4,12 @@ BUILD = g++ -std=c++23 -O2 -Wall
 # Solenoid Array Identifiers     ::
 SA-SRC-01 = main.cpp
 SA-INC-01 = osuenv.cpp
+SA-INC-02 = beatmap.cpp
+SA-INC-03 = omaniaparser.cpp
+
 SA        = Solenoid-Array
 SA-SRC    = src\$(SA)\$(SA-SRC-01)
-SA-INC    = include\$(SA)\$(SA-INC-01)
+SA-INC    = include\$(SA)\$(SA-INC-01) include\$(SA)\$(SA-INC-02) include\$(SA)\$(SA-INC-03)
 
 # Keystrokes Display Identifiers ::
 KS-SRC-01 = -1
@@ -31,18 +34,18 @@ else
 	CLS = clear
 endif
 
-# Build Commands ::
-build-SA: clean #:: Solenoid Array.
+# Build Commands  ::
+build-SA: clean # :: Solenoid Array.
 	@$(BUILD) $(SA-SRC) $(SA-INC) -o build\$(SA).exe
 	@echo ::
 	@echo Success :: Built $(SA).exe !
 
-build-KS: clean #:: Keystrokes Display.
+build-KS: clean # :: Keystrokes Display.
 	@$(BUILD) $(KS-SRC) -o build\$(KS).exe
 	@echo ::
 	@echo Success :: Built $(KS).exe !
 
-build-KPS: clean #:: KPS Display.
+build-KPS: clean # :: KPS Display.
 	@$(BUILD) $(KPS-SRC) -o build\$(KPS).exe
 	@echo ::
 	@echo Success :: Built $(KPS).exe !
