@@ -1,7 +1,7 @@
 #include "..\..\include\Solenoid-Array\osuenv.h"
 #include "..\..\include\Solenoid-Array\omaniaparser.h"
 #include <algorithm>
-std::string DR = R"(C:\Users\Esperanza\AppData\Local\osu!)";
+std::string DR = R"(C:\Users\Ryoon\AppData\Local\osu!)";
 std::string MF = R"(1903205 -45 - The ArcticLight)";
 std::string MP = R"(-45 - The ArcticLight (tyrcs) [9th Dan].osu)";
 
