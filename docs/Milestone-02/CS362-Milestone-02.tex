@@ -1,0 +1,68 @@
+\documentclass[11pt]{article}
+\usepackage{minted}
+\usepackage{amsfonts, amssymb, amsmath, float}
+\usepackage{enumerate, esint, nicefrac, algorithm2e}
+\parindent 0px
+\date{\today}
+\title{CS 362 :\hspace{2px}: Milestone 2}
+\author{Ryan Magdaleno \& John Ezra See\\ More info on page 2.}
+
+% Helpful ::
+% \line(1,0){358px}
+
+\begin{document}
+\maketitle
+\hspace{20px}Our group would like to create an Arduino system that displays certain 
+stats about key presses and also a solenoid key presser. The solenoid machine would 
+press keys on the keyboard and act like an automatic rhythm game player. The KPS 
+stat display would then display the key presses per second and the animator display 
+would show the keystrokes animating upwards. This project is centered around rhythm
+games  and the solenoid machine would press to the notes of some rhythm game, with
+the stat displays calculating the keys per second and keystrokes based on the 
+keyboard presses.
+
+\hspace{20px}The first Arduino is responsible for the displays (corresponding to 
+the first and second ideas below). The second Arduino will be responsible for the 
+solenoid machine. The solenoid machine consists of a sensor to signify when to press 
+the keys (by pixel/light changes) which also communicates with the other 
+Arduino dedicated to the displays. We are planning to use a 2x16 LCD to display the
+key/second and a Nokia 5110 LCD to display the actual keystrokes. Both of the 
+displays will take input from the computer, which is taking input from the 
+key-pressing machine. The communication mechanism will be via the serial cable, 
+from the solenoid Arduino machine into the computer side and finally into the 
+stat display Arduino. The input devices would be the keyboard and photoresistors.
+The output device would be the solenoids, 2x16 LCD, and the Nokia 5110 LCD.
+
+\hspace{20px}This project is original because it's centered around the game Osu! mania.
+We are making use of a solenoid machine to press the keys for us and display those
+stats to whoever is viewing them. This project makes use of the Osu Mania file
+format (.osu), which we assume is an original idea considering Osu Mania is a fairly
+niche rhythm game. The 2D keystrokes animator display is also original because
+we've never seen something like that made on an Arduino display before.
+
+\pagebreak
+
+\textbf{Furthur Information : :} \\
+Grout Project Title : : VSRG-UNO-R3 : :  VSRG Stats Display for Arduino. \\
+\vspace{10px}\line(1,0){358px} \\Group members : : \\
+Ryan Magdaleno (rmagd2) - 11 PM Lab \\
+John Ezra See (jsee4) - 1 PM Lab \\
+\vspace{10px}\line(1,0){358px} \\First Arduino : : \\
+Display : : Key Presses/second display. (2x16 LCD) \\
+Display : : Keystrokes/key display animator. (Nokia 5110 LCD) \\
+\vspace{10px}\line(1,0){358px} \\Second Arduino : :
+Key-press machine - A sensor that detects pixel changes and then communicates 
+with a machine (solenoids and photoresistors). \\
+\vspace{10px}\line(1,0){358px} \\Group ideas : : \\
+First idea - Display : :  Key Presses/second display. \\
+Second idea -  Display : : Keystrokes/key display animator. \\
+Third idea - Solenoid machine. (detects pixel changes then communicates with
+machine) \\
+\vspace{10px}\line(1,0){358px} \\External devices : :
+\begin{enumerate}
+\item Photoresistors.
+\item Solenoids.
+\item 2x16 LCD.
+\item Nokia 5110 LCD.
+\end{enumerate}
+\end{document}
