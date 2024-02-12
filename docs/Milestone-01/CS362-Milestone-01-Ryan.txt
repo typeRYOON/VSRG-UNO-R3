@@ -1,0 +1,15 @@
+My project idea is a key strokes display and keys per second display.
+The key strokes display would show four key columns on an arduino screen, and animates
+upwards.
+
+I will use a single arduino system for handling the key strokes animation rendering.
+I would then use a second arduino to handle the key per second display rendering.
+
+The computer side will compute the bitmaps and KPS calculations, the transfer method
+will be a high baud rate serial connection to each arduino. I believe the computer will
+be able to calculate the needed animations, I am simply worried about the rate of refresh
+on the screens.
+
+The input device would be a keyboard, and possibly a reset button. The output would be a 
+screen display for the key strokes, and 4 leds for currently pressed keys (only four keys
+would be tracked).
