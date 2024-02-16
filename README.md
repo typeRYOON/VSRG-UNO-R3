@@ -37,3 +37,6 @@ cd VSRG-UNO-R3
 ### Getting Started
 I can't give more instructions as the project hasn't gotten to a finished state yet.  
 > Current Status: Implemented Software at a rudimentary level, will expand on it later.
+
+## License
+Distributed under the MIT License. See `LICENSE` for more information.
