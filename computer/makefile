@@ -15,8 +15,9 @@ KS        = Keystrokes-Display
 KS-SRC-01 = main.cpp
 KS-INC-01 = osuenv.cpp
 KS-INC-02 = keychecker.cpp
+KS-INC-03 = SimpleSerial.cpp
 KS-SRC    = src\$(KS)\$(KS-SRC-01)
-KS-INC    = include\$(KS)\$(KS-INC-01) include\$(KS)\$(KS-INC-02)
+KS-INC    = include\$(KS)\$(KS-INC-01) include\$(KS)\$(KS-INC-02) include\$(KS)\$(KS-INC-03)
 
 # KPS Display Identifiers        ::
 KPS        = KPS-Display
