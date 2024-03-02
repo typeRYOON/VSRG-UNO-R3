@@ -1,58 +1,23 @@
-## VSRG-UNO-R3 : : VSRG Auto Player with Stats Display  
-> Note: This project is still very much in development, member Ryan made a README for one of his classes.
----
-CS 362 Final Group Project.  
-This is a program that requires two Arduino Unos and some additional hardware listed [below.](#arduino-components)
-
-Team Members:  
-> Member 1 : : John Ezra See - jsee4  
-> Member 2 : : Ryan Magdaleno - rmagd2
-
-## Prerequisites  
-Please make sure you have the following prerequisites:
-* A computer with 2 USB ports  
-* C++23 Compiler  
-* [Arduino Hardware](#arduino-components)
-
-## Arduino Components  
-> WIP project, parts may change.
-* 2 Arduino Unos
-* Breadboard  
-* Nokia 5110 LCD  
-* 16x2 LCD Display  
-* 2 10K Ohm Potentiometers  
-* 3 220 Ohm Resistors  
-* 4/7 5V solenoids
-* 4/7 MOSFETs
-* Holder for Solenoids
-* Many wires
-
-## Downloading the source code
-Clone the repository:
-```
-git clone https://github.com/typeRYOON/VSRG-UNO-R3
-cd VSRG-UNO-R3
-```
-
-### Getting Started
-I can't give more instructions as the project hasn't gotten to a finished state yet.  
-> Current Status: Implemented Software at a rudimentary level, will expand on it later.
-
-## License
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
 
 
 
 <!-- PROJECT SHIELDS -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
+<div align="center">
+  <a href="https://github.com/typeRYOON/VSRG-UNO-R3/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/typeRYOON/VSRG-UNO-R3.svg?style=for-the-badge">
+  </a>
+  <a href="https://github.com/typeRYOON/VSRG-UNO-R3/stargazers">
+    <img src="https://img.shields.io/github/stars/typeRYOON/VSRG-UNO-R3.svg?style=for-the-badge">
+  </a>
+  <a href="https://github.com/typeRYOON/VSRG-UNO-R3/issues">
+    <img src="https://img.shields.io/github/issues/typeRYOON/VSRG-UNO-R3.svg?style=for-the-badge">
+  </a>
+  <a href="https://github.com/typeRYOON/VSRG-UNO-R3/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/typeRYOON/VSRG-UNO-R3.svg?style=for-the-badge">
+  </a>
+</div>
 
 
 <!-- PROJECT LOGO -->
@@ -244,18 +209,6 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/typeRYOON/VSRG-UNO-R3.svg?style=for-the-badge
-[contributors-url]: https://github.com/typeRYOON/VSRG-UNO-R3/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/typeRYOON/VSRG-UNO-R3.svg?style=for-the-badge
-[forks-url]: https://github.com/typeRYOON/VSRG-UNO-R3/network/members
-[stars-shield]: https://img.shields.io/github/stars/typeRYOON/VSRG-UNO-R3.svg?style=for-the-badge
-[stars-url]: https://github.com/typeRYOON/VSRG-UNO-R3/stargazers
-[issues-shield]: https://img.shields.io/github/issues/typeRYOON/VSRG-UNO-R3.svg?style=for-the-badge
-[issues-url]: https://github.com/typeRYOON/VSRG-UNO-R3/issues
-[license-shield]: https://img.shields.io/github/license/typeRYOON/VSRG-UNO-R3.svg?style=for-the-badge
-[license-url]: https://github.com/typeRYOON/VSRG-UNO-R3/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
@@ -273,3 +226,50 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+
+
+
+## VSRG-UNO-R3 : : VSRG Auto Player with Stats Display  
+> Note: This project is still very much in development, member Ryan made a README for one of his classes.
+---
+CS 362 Final Group Project.  
+This is a program that requires two Arduino Unos and some additional hardware listed [below.](#arduino-components)
+
+Team Members:  
+> Member 1 : : John Ezra See - jsee4  
+> Member 2 : : Ryan Magdaleno - rmagd2
+
+## Prerequisites  
+Please make sure you have the following prerequisites:
+* A computer with 2 USB ports  
+* C++23 Compiler  
+* [Arduino Hardware](#arduino-components)
+
+## Arduino Components  
+> WIP project, parts may change.
+* 2 Arduino Unos
+* Breadboard  
+* Nokia 5110 LCD  
+* 16x2 LCD Display  
+* 2 10K Ohm Potentiometers  
+* 3 220 Ohm Resistors  
+* 4/7 5V solenoids
+* 4/7 MOSFETs
+* Holder for Solenoids
+* Many wires
+
+## Downloading the source code
+Clone the repository:
+```
+git clone https://github.com/typeRYOON/VSRG-UNO-R3
+cd VSRG-UNO-R3
+```
+
+### Getting Started
+I can't give more instructions as the project hasn't gotten to a finished state yet.  
+> Current Status: Implemented Software at a rudimentary level, will expand on it later.
+
+## License
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
