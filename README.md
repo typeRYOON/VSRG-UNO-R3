@@ -13,7 +13,7 @@
   <a href="https://github.com/typeRYOON/VSRG-UNO-R3/issues">
     <img src="https://img.shields.io/github/issues/typeRYOON/VSRG-UNO-R3.svg?style=for-the-badge">
   </a>
-  <a href="https://github.com/typeRYOON/VSRG-UNO-R3/blob/master/LICENSE">
+  <a href="https://github.com/typeRYOON/VSRG-UNO-R3/blob/master/LICENSE.md">
     <img src="https://img.shields.io/github/license/typeRYOON/VSRG-UNO-R3.svg?style=for-the-badge">
   </a>
 </div>
@@ -31,7 +31,7 @@
   <p align="center">
     Arduino VSRG Auto Player w/ Stats Display!
     <br />
-    <a href="https://github.com/typeRYOON/VSRG-UNO-R3"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/typeRYOON/VSRG-UNO-R3/tree/main/docs"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/typeRYOON/VSRG-UNO-R3">View Demo</a>
