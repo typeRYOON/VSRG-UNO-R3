@@ -7,7 +7,7 @@
  >>             https://www.build-electronic-circuits.com/rectifier-diode/ (Diode)
  >>             https://users.ece.utexas.edu/~valvano/Datasheets/PN2222-D.pdf (Transistor)
  - -                             - -
- >> Brief Description   : Solenoid function - currently works with only one solenoid.
+ >> Brief Description   : Solenoid function - currently works with only two solenoids.
  >> Materials           : 2x PN2222 Transistor, 2x Diode Rectifier, 2x 1000 Ohm Resistor
  >>                       Many wires, 2x pretty bad solenoid (will change)
  >> Assumptions         : None
