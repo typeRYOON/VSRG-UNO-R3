@@ -23,7 +23,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/typeRYOON/VSRG-UNO-R3">
-    <img src="resources/logo.jpg" alt="Logo" width="80" height="80">
+    <img src="res/github/logo.jpg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">VSRG-UNO-R3</h3>
