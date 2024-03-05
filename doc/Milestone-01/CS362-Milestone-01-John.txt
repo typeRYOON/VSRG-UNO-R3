@@ -1,0 +1,21 @@
+As discussed with my selected lab partner, our idea is to make a device related to the
+video game "Osu! Mania". Osu! Mania is a rhythm game that consists of notes falling
+vertically in different lanes. These lanes represent a single keyboard key and a
+falling node indicating that the key has to be pressed at this exact time - resulting
+in a specific rhythm. Our plan is to make a solenoid that receives input from the
+photo interrupter and displays the keys per minute number to a side LED screen.
+
+The project will use multiple Arduinos because we plan on having different
+functionalities. For example, an Arduino detects falling notes through the use of a
+sensor that sends a signal on the solenoid. Another Arduino for the LED screen, and
+more.
+
+In terms of Arduinos/Microcontrollers, it seems that we're going to have an INPUT
+and OUTPUT. Our INPUT is the note detection, our OUTPUT could be when we display
+things on the LED screen or do solenoid key presses (as we'd need a signal as to
+when to click it)
+
+In terms of devices used, our idea is to use a photo interrupter to detect note presses
+(subject to change). And, solenoid.
+
+This work is original because it's a video game.
