@@ -1,0 +1,454 @@
+\documentclass{article}
+
+\usepackage[bookmarksnumbered, colorlinks, plainpages]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
+\usepackage{graphicx}
+
+\graphicspath{ {./img/} }
+\usetikzlibrary{automata, positioning}
+
+%
+% Basic Document Settings
+%
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1}
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName}
+\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle}
+\rhead{\firstxmark}
+\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\setlength\parindent{0pt}
+
+%
+% Create Problem Sections
+%
+
+\newcommand{\enterProblemHeader}[1]{
+    \nobreak\extramarks{}{}\nobreak{}
+    \nobreak\extramarks{}{}\nobreak{}
+}
+
+\newcommand{\exitProblemHeader}[1]{
+    \nobreak\extramarks{}{}\nobreak{}
+    \stepcounter{#1}
+    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+}
+
+\setcounter{secnumdepth}{0}
+\newcounter{partCounter}
+\newcounter{homeworkProblemCounter}
+\setcounter{homeworkProblemCounter}{1}
+\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+
+%
+% Homework Problem Environment
+%
+
+\newenvironment{homeworkProblem}[1]{
+    %\section{Problem \arabic{homeworkProblemCounter}{#1}}
+    \setcounter{partCounter}{1}
+    \enterProblemHeader{homeworkProblemCounter}
+}{
+    \exitProblemHeader{homeworkProblemCounter}
+}
+
+%
+% Homework Details
+%   - Title
+%   - Due date
+%   - Class
+%   - Section/Time
+%   - Instructor
+%   - Author
+%
+
+\newcommand{\hmwkTitle}{Milestone 3}
+\newcommand{\hmwkDueDate}{March 5, 2024}
+\newcommand{\hmwkClass}{CS 362}
+\newcommand{\hmwkClassTime}{11:00am}
+\newcommand{\hmwkClassInstructor}{Professor Troy}
+\newcommand{\hmwkAuthorName}{\textbf{John Ezra See}\\\textbf{Ryan Magdaleno}}
+\newcommand{\hwline}{\begin{center}\line(1,0){358px}\end{center}}
+
+%
+% Title Page
+%
+
+\title{
+    \vspace{2in}
+    \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+    \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate\ at 11:59pm}\\
+    \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+    \vspace{3in}
+}
+
+\author{\hmwkAuthorName\\
+\href{mailto:jsee4@uic.edu}{jsee4@uic.edu}\\
+\href{mailto:rmagd2@uic.edu}{rmagd2@uic.edu}}
+\date{}
+
+\renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}
+\stepcounter{partCounter}\\}
+%
+% Various Helper Commands
+%
+
+% Useful for algorithms
+\newcommand{\alg}[1]{\textsc{\bfseries \footnotesize #1}}
+
+% For derivatives
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}x} (#1)}
+
+% For partial derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}
+
+% Integral ds
+\newcommand{\dx}{\mathrm{d}x}
+\newcommand{\D}[1]{\mathrm{d}#1}
+
+% Image insertion
+\newcommand{\img}[2]{\begin{center}\includegraphics[scale=#1]{#2}\end{center}}
+
+% Alias for the Solution section header
+\newcommand{\solution}{\textbf{\large Solution}\\}
+
+% Probability commands: Expectation, Variance, Covariance, Bias
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Bias}{\mathrm{Bias}}
+
+\begin{document}
+
+\maketitle
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \subsection{Group Information}
+    Group 62: VSRG-UNO-R3 \\
+    Names:
+    \begin{enumerate}
+        \item \vspace{-10pt}
+        Ryan Magdaleno: \href{mailto:rmagd2@uic.edu}{rmagd2@uic.edu}
+        \item \vspace{-10pt}
+        John Ezra See: \hspace{11pt}\href{mailto:jsee4@uic.edu}{jsee4@uic.edu}
+    \end{enumerate}
+    \hwline
+    \vspace{-20pt}\subsection{Abstract}
+    This project introduces an original Arduino/C++ endeavor aimed at enhancing the 
+    gaming experience through innovative hardware and software integration. Utilizing 
+    Arduino microcontrollers and solenoid arrays, it offers physical interaction with 
+    rhythm games, synchronizing gameplay with real-time data processing. The system 
+    manages communication between components and supports customization preferences. 
+    Through this project, users can enjoy an immersive and customizable VSRG experience, 
+    demonstrating creativity and innovation in Arduino/C++ technology.
+    \hwline
+\end{homeworkProblem}
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \subsection{1 Project Idea}
+    \hspace{20pt}Our project idea centers around enhancing the experience of playing 
+    Vertical Scrolling Rhythm Games (VSRGs), particularly focusing on key presses. We 
+    plan to utilize two Arduino microcontrollers to manage two displays and a solenoid 
+    array. One Arduino will control the displays, showcasing both the keys pressed per 
+    second and the key press strokes. This data will be calculated and sent via serial 
+    communication to a computer-side program. We intend to update the display with the 
+    keys per second value every 20 milliseconds on a 16x2 LCD screen. Additionally,
+    we will transmit a binary value representing the keys pressed, also updating every 20 
+    milliseconds. 
+
+    \vspace{10pt}\hspace{20pt}For gameplay, we've chosen Osu Mania due to its easily 
+    parseable .osu file format, which contains hit timings for beatmaps. Although Osu 
+    Mania supports maps of various key counts, we will focus on maps ranging from 4 to 7 
+    keys. On the computer side, the program will read the hit timings from the .osu files 
+    and organize them into a hit-chart container. It will then gradually transmit this 
+    data to the solenoid array Arduino for physical key presses. We're also considering 
+    utilizing the Arduino's flash memory to store this data, although this aspect is 
+    still under consideration. The solenoid array Arduino will receive the .osu data and 
+    trigger the solenoids to execute physical key presses. The computer program will 
+    continuously monitor these key presses, calculating both keystrokes and keys per 
+    second, and sending the accurate values to the display Arduino. For the Arduino 
+    managing keystrokes, we will employ a Nokia 5110 LCD to display the pressed keys,
+    animating them upwards for visual feedback.
+    \hwline
+\end{homeworkProblem}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \vspace{-20pt}\subsection{2 Initial Project Design}
+    \hspace{20pt}One Arduino will receive hit press data from a computer-side program and 
+    activate corresponding solenoid keys. The other Arduino will receive keyboard press 
+    information, including keys per second and recent key presses. The computer-side 
+    program will start both Arduinos upon pressing key H and stop them upon pressing key 
+    J. A Serial connection will be transmitted from the solenoid Arduino to the display 
+    Arduino, terminating both Arduinos simultaneously.
+    \hwline
+\end{homeworkProblem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \vspace{-20pt}\subsection{3 Arduino Communication}
+    \hspace{20pt}For communication, we'll utilize a computer-side program to send the 
+    necessary data to each Arduino as required. The solenoid Arduino will receive beatmap 
+    hit data, while the display Arduino will receive keys per second (KPS) and keystroke 
+    data.
+
+    \vspace{10pt}\hspace{20pt}Initiating and stopping both Arduinos will be controlled by 
+    the computer-side program. To begin operation, the key H must be pressed. When this 
+    key is pressed, the computer-side program will send the solenoid Arduino a signal 
+    (0xFFFF), which will then be forwarded to the display Arduino via the TX and RX pins. 
+    Termination will follow a similar procedure.
+    \hwline
+\end{homeworkProblem}
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \subsection{4 Expected Inputs/Outputs}
+
+    \textbf{Expected Inputs}
+    \begin{enumerate}
+        \item \vspace{-8pt}\textbf{Keyboard Input:}
+        The user would input commands through the keyboard. For example, pressing the key 
+        H to start the system and the key J to terminate it.
+        \item \vspace{-8pt}\textbf{Beatmap Hit Data (.osu file):}
+        This data would be inputted into the computer-side program, to provide the timing
+        and sequence of hits in the osu beatmap.
+    \end{enumerate}
+
+    \textbf{Expected Outputs}
+    \begin{enumerate}
+        \item \vspace{-8pt}\textbf{Solenoid Activation:}
+        The solenoid Arduino would output signals to activate the solenoids corresponding
+        to the hit data received from the computer-side program. This would physically
+        press keys on the keyboard.
+        \item \vspace{-8pt}\textbf{Display Data:}
+        The display Arduino would output data to the connected display, showing
+        information such as keys per second and recent key presses. This provides visual
+        feedback to the user. KPS on a 16x2 LCD, key strokes on a Nokia 5110 LCD.
+        \item \vspace{-8pt}\textbf{Status Indicators:}
+        The computer-side program may output status indicators or messages to inform the
+        user about the system's operation, such as when it has started or terminated
+        successfully.
+    \end{enumerate}
+    \hwline
+\end{homeworkProblem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \vspace{-20pt}\subsection{5 Original Work Justification}
+    \hspace{20pt}This project presents an original Arduino/C++ endeavor through its 
+    fusion of hardware 
+    and software elements to enhance the Osu Mania gaming experience. By integrating 
+    custom 
+    hardware components like Arduino microcontrollers and solenoid arrays, the system 
+    goes beyond typical software-based modifications, allowing for physical 
+    interaction with the game. It processes real-time data, including beatmap 
+    hit timings and key presses, to synchronize physical actions with gameplay, 
+    showcasing advanced programming techniques in C++ (multi-threading, chrono timing, 
+    windows serial handles). Managing communication and synchronization between multiple 
+    components, including the computer-side program, Arduinos, solenoid array, and 
+    displays, demonstrates a sophisticated understanding of system architecture and 
+    programming principles. Overall, this project stands out as an original and 
+    innovative Arduino/C++ project, offering a creative VSRG gaming experience.
+    \hwline
+\end{homeworkProblem}
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \subsection{6 Timeline of Development}
+    \begin{enumerate}
+        \item \vspace{-8pt}\textbf{Week 9 (03/11/24):}\\
+        Ryan will be focused on finishing up the display Arduino code,
+        and will be finishing up the computer-side program for the display
+        Arduino.\\
+        John's circuit catches on fire after connecting a 950 mA solenoid with a 600 mA
+        transistor.
+        \item \vspace{-8pt}\textbf{Week 10 (03/18/24):}\\
+        Ryan is helping John with the solenoid computer-side code. \\
+        John is researching and prototyping solenoid Arduino.
+        \item \vspace{-8pt}\textbf{Week 11 (03/25/24):}\\
+        Ryan will try making a GUI, otherwise will help John. \\
+        John will try finishing up the software side for the solenoid.
+        \item \vspace{-8pt}\textbf{Week 12 (04/01/24):}\\
+        Ryan will try making a GUI, otherwise will help John. \\
+        John will try finishing up the software side for the solenoid.
+        \item \vspace{-8pt}\textbf{Week 13 (04/08/24):}\\
+        Ryan will try making a GUI, otherwise will help John. \\
+        John is finishing up solenoid Arduino. \\
+        Make final stand for both Arduinos to sit on.
+        \item \vspace{-8pt}\textbf{Week 14 (04/15/24):}\\
+        Create presentation slides and present on 04/15/24 in lab.
+        \item \vspace{-8pt}\textbf{Week 15 (04/22/24):}\\
+        Do finishing tweaks and do project demonstration on 04/22/24 in
+        lab.
+        \item \vspace{-8pt}\textbf{Week 16 (04/29/24):}\\
+        Do individual group reflection, and submit final report.
+    \end{enumerate}
+    \hwline
+\end{homeworkProblem}
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \subsection{7 List of Materials Expected}
+    \textbf{Display Arduino}
+    \begin{enumerate}
+        \item \vspace{-8pt} 1x Arduino UNO-R3
+        \item \vspace{-8pt} 1x 16x2 LCD
+        \item \vspace{-8pt} 1x Nokia 5110 LCD
+        \item \vspace{-8pt} 1x 10K$\Omega$ potentiometer
+        \item \vspace{-8pt} 4x 10K$\Omega$ resistors
+        \item \vspace{-8pt} 1x 220$\Omega$ resistor
+        \item \vspace{-8pt} 1x 330$\Omega$ resistor
+        \item \vspace{-8pt} 1x 1K$\Omega$ resistor
+    \end{enumerate}
+    \textbf{Solenoid Array Arduino}
+    \begin{enumerate}
+        \item \vspace{-8pt} 1x Arduino UNO-R3
+        \item \vspace{-8pt} 1x 1K$\Omega$ resistor
+        \item \vspace{-8pt} 4x 1n4007 Diode Rectifier
+        \item \vspace{-8pt} 4x NPN TIP122 Transistors
+        \item \vspace{-8pt} 4x BM-0530B Solenoid
+        \item \vspace{-8pt} 12V Barrel-Jack Power Supply
+    \end{enumerate}
+    \textbf{Miscellaneous}
+    \begin{enumerate}
+        \item \vspace{-8pt} C++23 Compiler
+        \item \vspace{-8pt} Windows Computer
+        \item \vspace{-8pt} Lots of jumper wires.
+    \end{enumerate}
+    \hwline
+\end{homeworkProblem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \vspace{-20pt}\subsection{8 List of References}
+    \begin{enumerate}
+        \item \vspace{-8pt}
+        \href{https://en.cppreference.com/w/cpp/header/chrono}
+        {https://en.cppreference.com/w/cpp/header/chrono}
+        \item \vspace{-8pt}
+        \href{https://en.cppreference.com/w/cpp/header/thread}
+        {https://en.cppreference.com/w/cpp/header/thread}
+        \item \vspace{-8pt}
+        \href{https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-dcb}
+        {https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-dcb}
+        \item \vspace{-8pt}
+        \href{https://www.theengineeringprojects.com/2019/06/introduction-to-pn2222.html}
+        {https://www.theengineeringprojects.com/2019/06/introduction-to-pn2222.html}
+        \item \vspace{-8pt}
+        \href{https://www.youtube.com/watch?v=haUWO7BGYTE}
+        {https://www.youtube.com/watch?v=haUWO7BGYTE}
+        \item \vspace{-8pt}
+        \href{https://www.build-electronic-circuits.com/rectifier-diode/}
+        {https://www.build-electronic-circuits.com/rectifier-diode/}
+        \item \vspace{-8pt}
+        \href{https://users.ece.utexas.edu/~valvano/Datasheets/PN2222-D.pdf}
+        {https://users.ece.utexas.edu/~valvano/Datasheets/PN2222-D.pdf}
+        \item \vspace{-8pt}
+        \href{https://www.vishay.com/docs/88503/1n4001.pdf}
+        {https://www.vishay.com/docs/88503/1n4001.pdf}
+        \item \vspace{-8pt}
+        \href{https://www.onsemi.com/pdf/datasheet/tip120-d.pdf}
+        {https://www.onsemi.com/pdf/datasheet/tip120-d.pdf}
+    \end{enumerate}
+    \hwline
+\end{homeworkProblem}
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \subsection{9 Diagrams + Pseudocode}
+
+    Keystrokes and KPS Arduino:
+    \img{0.5}{ryan.png}
+    \hwline
+    Solenoid Array Arduino:
+    \img{0.6}{john.png}
+    \hwline
+
+    \pagebreak
+
+    Keystrokes and KPS Arduino:
+    \begin{enumerate}
+        \item \vspace{-5pt}
+        Setup pins for both displays.
+        \item \vspace{-5pt}
+        Wait for start signal from RX pin to start.
+        \item \vspace{-5pt}
+        Loop until terminate signal read from RX.
+        \begin{enumerate}
+            \item \vspace{-5pt}
+            Check if serial has data, read a short from it.
+            \item \vspace{-5pt}
+            Using bitwise operators, get the KPS from the first 8 bits,
+            and get the key presses from the last 8 bits.
+            \item \vspace{-5pt}
+            Update displays with received data.
+        \end{enumerate}
+    \end{enumerate}
+    \hwline
+    Solenoid Array Arduino:
+    \begin{enumerate}
+        \item \vspace{-5pt}
+        Setup pins for solenoids.
+        \item \vspace{-5pt}
+        Wait for start signal from RX pin to start.
+        \item \vspace{-5pt}
+        Loop until terminate signal read from RX.
+        \begin{enumerate}
+            \item \vspace{-5pt}
+            Read in hit press data when available.
+            \item \vspace{-5pt}
+            Send correct signals to solenoids depending on next hit object
+            in queue.
+        \end{enumerate}
+    \end{enumerate}
+    \hwline
+\end{homeworkProblem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
