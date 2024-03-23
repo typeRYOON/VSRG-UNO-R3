@@ -135,16 +135,30 @@ Skip the `Building from source` section if you're using the Release binary.
 > Build the below configurations depending on your materials and wanted Arduino features.  
 
 ### Arduino 1: Autoplayer  
-test123test123
+* `4x` Photoresistor
+* `4x` 10K ohm resistors
+* `4x` LEDs
+* `4x` 220 ohm resistors
+* `1x` Arduino Uno R3
+* `1x` Breadboard
+* `1x` Serial cable
+* Supplements: wires (extensions, double sided), tape, styrofoam
 
 ### Arduino 2: Key-strokes / Keys per second display
-
-
+* `2x` 10K Ohm potentiometer  
+* `1x` 16x2 LCD display
+* `1x` Nokia 5110 LCD
+* `4x` 10K ohm resistors
+* `1x` 220 ohm resistor
+* `1x` 330 ohm resistor
+* `1x` 1K omh resistor
+* `WIP`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+WIP
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
