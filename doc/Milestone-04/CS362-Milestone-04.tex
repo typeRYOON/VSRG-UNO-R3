@@ -1,0 +1,561 @@
+\documentclass{article}
+
+\usepackage{minted}
+\usepackage[bookmarksnumbered, colorlinks, plainpages]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
+\usepackage{graphicx}
+
+\graphicspath{ {./img/} }
+\usetikzlibrary{automata, positioning}
+
+%
+% Basic Document Settings
+%
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1}
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName}
+\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle}
+\rhead{\firstxmark}
+\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\setlength\parindent{0pt}
+
+%
+% Create Problem Sections
+%
+
+\newcommand{\enterProblemHeader}[1]{
+    \nobreak\extramarks{}{}\nobreak{}
+    \nobreak\extramarks{}{}\nobreak{}
+}
+
+\newcommand{\exitProblemHeader}[1]{
+    \nobreak\extramarks{}{}\nobreak{}
+    \stepcounter{#1}
+    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+}
+
+\setcounter{secnumdepth}{0}
+\newcounter{partCounter}
+\newcounter{homeworkProblemCounter}
+\setcounter{homeworkProblemCounter}{1}
+\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+
+%
+% Homework Problem Environment
+%
+
+\newenvironment{homeworkProblem}[1]{
+    %\section{Problem \arabic{homeworkProblemCounter}{#1}}
+    \setcounter{partCounter}{1}
+    \enterProblemHeader{homeworkProblemCounter}
+}{
+    \exitProblemHeader{homeworkProblemCounter}
+}
+
+%
+% Homework Details
+%   - Title
+%   - Due date
+%   - Class
+%   - Section/Time
+%   - Instructor
+%   - Author
+%
+
+\newcommand{\hmwkTitle}{Milestone 4}
+\newcommand{\hmwkDueDate}{March 29, 2024}
+\newcommand{\hmwkClass}{CS 362}
+\newcommand{\hmwkClassTime}{11:00am}
+\newcommand{\hmwkClassInstructor}{Professor Troy}
+\newcommand{\hmwkAuthorName}{\textbf{John Ezra See}\\\textbf{Ryan Magdaleno}}
+\newcommand{\hwline}{\begin{center}\line(1,0){358px}\end{center}}
+
+%
+% Title Page
+%
+
+\title{
+    \vspace{2in}
+    \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+    \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate\ at 11:59pm}\\
+    \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+    \vspace{3in}
+}
+
+\author{\hmwkAuthorName\\
+\href{mailto:jsee4@uic.edu}{jsee4@uic.edu}\\
+\href{mailto:rmagd2@uic.edu}{rmagd2@uic.edu}}
+\date{}
+
+\renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}
+\stepcounter{partCounter}\\}
+%
+% Various Helper Commands
+%
+
+% Useful for algorithms
+\newcommand{\alg}[1]{\textsc{\bfseries \footnotesize #1}}
+
+% For derivatives
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}x} (#1)}
+
+% For partial derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}
+
+% Integral ds
+\newcommand{\dx}{\mathrm{d}x}
+\newcommand{\D}[1]{\mathrm{d}#1}
+
+% Image insertion
+\newcommand{\img}[2]{\begin{center}\includegraphics[scale=#1]{#2}\end{center}}
+
+% Alias for the Solution section header
+\newcommand{\solution}{\textbf{\large Solution}\\}
+
+% Probability commands: Expectation, Variance, Covariance, Bias
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Bias}{\mathrm{Bias}}
+
+\begin{document}
+
+\maketitle
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \subsection{Group Information}
+    Group 62: VSRG-UNO-R3 \\
+    Names:
+    \begin{enumerate}
+        \item \vspace{-10pt}
+        Ryan Magdaleno: \href{mailto:rmagd2@uic.edu}{rmagd2@uic.edu}
+        \item \vspace{-10pt}
+        John Ezra See: \hspace{11pt}\href{mailto:jsee4@uic.edu}{jsee4@uic.edu}
+    \end{enumerate}
+    \hwline
+    \vspace{-20pt}\subsection{Abstract}
+    This project introduces an original Arduino/C++ endeavor aimed at enhancing the 
+    gaming experience through innovative hardware and software integration. Utilizing 
+    Arduino microcontrollers and a photoresistor array, it offers physical interaction 
+    with rhythm games, synchronizing gameplay with real-time data processing. The system 
+    manages communication between components and supports customization preferences. 
+    Through this project, users can enjoy an immersive and customizable VSRG experience, 
+    demonstrating creativity and innovation in Arduino/C++ technology.
+    \hwline
+\end{homeworkProblem}
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \subsection{1 Project Idea}
+    \hspace{20pt}Our project idea centers around enhancing the experience of playing 
+    Vertical Scrolling Rhythm Games (VSRGs), particularly focusing on key presses. We 
+    plan to utilize two Arduino microcontrollers to manage two displays and a 
+    photoresistor array. One Arduino will control the displays, showcasing both the keys 
+    pressed per second and the key press strokes. This data will be calculated and sent 
+    via serial communication to a computer-side program. We intend to update the display 
+    with the keys per second value every 20 milliseconds on a 16x2 LCD screen. 
+    Additionally, we will transmit a binary value representing the keys pressed, also 
+    updating every 20 milliseconds. 
+
+    \vspace{10pt}\hspace{20pt}For gameplay, we've chosen Osu Mania due to its easily 
+    parseable .osu file format, which contains hit timings for beatmaps. Although Osu 
+    Mania supports maps of various key counts, we will focus on maps ranging from 4 to 7 
+    keys. We've changed our original idea of using a solenoid array to a photoresistor
+    array because there were some complexities in the solenoid circuit. Now one Arduino 
+    will read the incoming notes and check if it's in front of the photoresistor. The
+    photoresistor array Arduino will send the binary encoding of the current keys pressed
+    to a computer side program. The computer side program will then press those keys.
+    The computer program will also
+    continuously monitor these key presses, calculating both keystrokes and keys per 
+    second, and sending the accurate values to the display Arduino. For the Arduino 
+    managing keystrokes, we will employ a Nokia 5110 LCD to display the pressed keys,
+    animating them upwards for visual feedback.
+    \hwline
+\end{homeworkProblem}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \vspace{-20pt}\subsection{2 Initial Project Design}
+    \hspace{20pt}One Arduino will read the screen with photoresistors and send the 
+    current notes to press, then it will be sent to a computer side program. The other 
+    Arduino will receive keyboard press information, including keys per second and recent 
+    key presses. The computer-side program will start both Arduinos upon pressing key H 
+    and stop them upon pressing key J. A Serial connection will be transmitted from the 
+    photoresistor Arduino to the display Arduino (via RX/TX pins), terminating both 
+    Arduinos simultaneously.
+    \hwline
+\end{homeworkProblem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \vspace{-20pt}\subsection{3 Arduino Communication}
+    \hspace{20pt}For communication, we'll utilize a computer-side program to send the 
+    necessary data to each Arduino as required. The photoresistor Arduino will send 
+    hit data, while the display Arduino will receive keys per second (KPS) and keystroke 
+    data.
+
+    \vspace{10pt}\hspace{20pt}Initiating and stopping both Arduinos will be controlled by 
+    the computer-side program. To begin operation, the key H must be pressed. When this 
+    key is pressed, the computer-side program will send the photoresistor Arduino a 
+    signal (0xFFFF), which will then be forwarded to the display Arduino via the TX and 
+    RX pins. Termination will follow a similar procedure.
+    \hwline
+\end{homeworkProblem}
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \subsection{4 Expected Inputs/Outputs}
+
+    \textbf{Expected Inputs}
+    \begin{enumerate}
+        \item \vspace{-8pt}\textbf{Keyboard Input:}
+        The user would input commands through the keyboard. For example, pressing the key 
+        H to start the system and the key J to terminate it.
+        \item \vspace{-8pt}\textbf{Beatmap Hit Data (.osu file):}
+        This data would be inputted into the computer-side program, to provide the timing
+        and sequence of hits in the osu beatmap.
+        \item \vspace{-8pt}\textbf{Note Light (photoresistors):}
+        The photoresistors will be reading the falling notes, it requires the note to be
+        in front of the photoresistor.
+    \end{enumerate}
+
+    \textbf{Expected Outputs}
+    \begin{enumerate}
+        \item \vspace{-8pt}\textbf{Display Data:}
+        The display Arduino would output data to the connected display, showing
+        information such as keys per second and recent key presses. This provides visual
+        feedback to the user. KPS on a 16x2 LCD, key strokes on a Nokia 5110 LCD.
+        \item \vspace{-8pt}\textbf{Status Indicators:}
+        The computer-side program may output status indicators or messages to inform the
+        user about the system's operation, such as when it has started or terminated
+        successfully.
+        \item \vspace{-8pt}\textbf{Overall GUI program:}
+        The computer-side program has a GUI, it will display many options to the user 
+        about what is going on, what is being transmitted, etc. It's a work in progress 
+        currently.
+        \img{0.3}{gui.png}
+    \end{enumerate}
+    \hwline
+\end{homeworkProblem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \vspace{-20pt}\subsection{5 Original Work Justification}
+    \hspace{20pt}This project presents an original Arduino/C++ endeavor through its 
+    fusion of hardware 
+    and software elements to enhance the Osu Mania gaming experience. By integrating 
+    custom 
+    hardware components like Arduino microcontrollers and a photoresistor arrays, the 
+    system 
+    goes beyond typical software-based modifications, allowing for physical 
+    interaction with the game. It processes real-time data, including beatmap 
+    hit timings and key presses, to synchronize physical actions with gameplay, 
+    showcasing advanced programming techniques in C++ (multi-threading, chrono timing, 
+    windows serial handles). Managing communication and synchronization between multiple 
+    components, including the computer-side program, Arduinos, photoresistor array, and 
+    displays, demonstrates a sophisticated understanding of system architecture and 
+    programming principles. Overall, this project stands out as an original and 
+    innovative Arduino/C++ project, offering a creative VSRG gaming experience.
+    A GUI is used to facilitate this.
+    \hwline
+\end{homeworkProblem}
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \vspace{-20pt}\subsection{6 How to Build the Project}
+    \begin{enumerate}
+        \item \vspace{-5pt}
+        Head over to \href{https://github.com/typeRYOON/VSRG-UNO-R3}
+        {https://github.com/typeRYOON/VSRG-UNO-R3}
+        \item \vspace{-5pt}
+        You can build from source following the instructions I set in the
+        description or just get an already built binary from the Release section.
+        If it's there (still working on making a version 1).
+        \item \vspace{-5pt}
+        For Arduino hardware please look at the diagrams below for what wiring
+        you need. Because the computer side program allows using 0, 1, or both Arduino
+        configurations, build whichever ones you'd like.
+        \item\vspace{-5pt}
+        For the photoresistor Arduino, put your photoresistors through something like
+        Foam and tape it to the osu mania game screen, it needs to read incoming notes.
+        Please download the osu skin from the res GitHub folder, it's optimal for this 
+        program.
+        \img{0.05}{photoresistors.jpg}
+    \end{enumerate}
+    \hwline
+\end{homeworkProblem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \vspace{-20pt}\subsection{7 How to Use the Project}
+    \begin{enumerate}
+        \item\vspace{-5pt}
+        Connect both Arduinos to the computer you're going to use. Note the
+        port name.
+        \item\vspace{-5pt}
+        On the project's Github repository, get the Arduino ino files from the
+        Arduino folder.
+        \item\vspace{-5pt}
+        Upload the ino program to each Arduino.
+        \item\vspace{-5pt}
+        You must have Osu installed and running before you open the GUI, it needs to
+        latch to the Osu process to read memory signatures (for GUI purposes).
+        \item\vspace{-5pt}
+        Make sure to install the Noto Sans JP font from the Github on your system.
+        \item\vspace{-5pt}
+        Before launching the GUI, enter Osu and set your osu mania 4K, 5K, 6K, 7K keys,
+        the program needs a valid set of keys to work with.
+        \item\vspace{-5pt}
+        Launch the GUI and go to the settings page (gear icon at top), set the Arduino
+        settings with the port selector.
+        \item\vspace{-5pt}
+        To run a configuration, select the beatmap in game and click on the GUI's
+        generate button along with the features you want to run.
+        \item\vspace{-5pt}
+        Assuming you're only using Arduino features, press H to start the two Arduinos.
+        \item\vspace{-5pt}
+        If you're using the computer autoplayer feature, press H on the first note.
+        \item\vspace{-5pt}
+        To terminate early, press J. You can also wait until the map finishes and the
+        Arduinos will terminate for you.
+        \item\vspace{-5pt}
+        An extra note, if you're using the Arduino autoplayer feature, please use the
+        osu skin in the res GitHub folder.
+    \end{enumerate}
+    An extra extra note, the GUI binary may not be on GitHub, everything is still a work
+    in progress. Some things like the skin may also be missing. But this is the general 
+    program flow that we intend to have. We expect to implement everything around 4/15.
+    \hwline
+
+\end{homeworkProblem}
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{homeworkProblem}{}
+    \subsection{8 Timeline of Development}
+    Completed Items:
+    \begin{enumerate}
+        \item \vspace{-8pt}\textbf{Week 9 (03/11/24):}\\
+        Ryan finished up the display Arduino code, and made a CLI for interacting
+        communicating with the Arduinos. \\
+        John's circuit catches on fire after connecting a 950 mA solenoid with a 600 mA
+        transistor.
+        \item \vspace{-8pt}\textbf{Week 10 (03/18/24):}\\
+        Ryan and John finished the photoresistor circuit/general code.
+        \item \vspace{-8pt}\textbf{Week 11 (03/25/24):}\\
+        Ryan learns Qt6 over spring break and makes a working GUI.
+
+    \end{enumerate}
+    Work left to do:
+    \begin{enumerate}
+        \item \vspace{-8pt}\textbf{Week 12 (04/01/24):}\\
+        Ryan will try finishing the GUI, otherwise will help John. \\
+        John will try implementing a 8to1 mux for 7K (7 photoresistors).
+        \item \vspace{-8pt}\textbf{Week 13 (04/08/24):}\\
+        Ryan will try finishing the GUI, otherwise will help John. \\
+        John will try implementing a 8to1 mux for 7K (7 photoresistors). \\
+        Make final stand for both Arduinos to sit on.
+        \item \vspace{-8pt}\textbf{Week 14 (04/15/24):}\\
+        Create presentation slides and present on 04/15/24 in lab.
+        \item \vspace{-8pt}\textbf{Week 15 (04/22/24):}\\
+        Do finishing tweaks and do project demonstration on 04/22/24 in lab.
+        \item \vspace{-8pt}\textbf{Week 16 (04/29/24):}\\
+        Do individual group reflection, and submit final report.
+    \end{enumerate}
+    \hwline
+\end{homeworkProblem}
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \subsection{9 List of Materials Expected}
+    \textbf{Display Arduino}
+    \begin{enumerate}
+        \item \vspace{-8pt} 1x Arduino UNO-R3
+        \item \vspace{-8pt} 1x 16x2 LCD
+        \item \vspace{-8pt} 1x Nokia 5110 LCD
+        \item \vspace{-8pt} 1x Breadboard
+        \item \vspace{-8pt} 2x 10K$\Omega$ potentiometer
+        \item \vspace{-8pt} 4x 10K$\Omega$ resistors
+        \item \vspace{-8pt} 1x 220$\Omega$ resistor
+        \item \vspace{-8pt} 1x 330$\Omega$ resistor
+        \item \vspace{-8pt} 1x 1K$\Omega$ resistor
+    \end{enumerate}
+    \textbf{Photoresistor Array Arduino}
+    \begin{enumerate}
+        \item \vspace{-8pt} 1x Arduino UNO-R3
+        \item \vspace{-8pt} 1x Breadboard
+        \item \vspace{-8pt} 4x 10K$\Omega$ resistor
+        \item \vspace{-8pt} 4x LEDs
+        \item \vspace{-8pt} 4x 220$\Omega$ resistors
+        \item \vspace{-8pt} 7x photoresistors.
+        \item \vspace{-8pt} 1x 8to1 multiplexor.
+    \end{enumerate}
+    \textbf{Miscellaneous}
+    \begin{enumerate}
+        \item \vspace{-8pt} C++23 Compiler
+        \item \vspace{-8pt} Windows Computer
+        \item \vspace{-8pt} Lots of jumper wires.
+    \end{enumerate}
+    \hwline
+\end{homeworkProblem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \vspace{-20pt}\subsection{10 List of References}
+    \begin{enumerate}
+        \item \vspace{-8pt}
+        \href{https://en.cppreference.com/w/cpp/header/chrono}
+        {https://en.cppreference.com/w/cpp/header/chrono}
+        \item \vspace{-8pt}
+        \href{https://en.cppreference.com/w/cpp/header/thread}
+        {https://en.cppreference.com/w/cpp/header/thread}
+        \item \vspace{-8pt}
+        \href{https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-dcb}
+        {https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-dcb}
+        \item \vspace{-8pt}
+        \href{https://www.theengineeringprojects.com/2019/06/introduction-to-pn2222.html}
+        {https://www.theengineeringprojects.com/2019/06/introduction-to-pn2222.html}
+        \item \vspace{-8pt}
+        \href{https://www.youtube.com/watch?v=haUWO7BGYTE}
+        {https://www.youtube.com/watch?v=haUWO7BGYTE}
+        \item \vspace{-8pt}
+        \href{https://www.build-electronic-circuits.com/rectifier-diode/}
+        {https://www.build-electronic-circuits.com/rectifier-diode/}
+        \item \vspace{-8pt}
+        \href{https://users.ece.utexas.edu/~valvano/Datasheets/PN2222-D.pdf}
+        {https://users.ece.utexas.edu/~valvano/Datasheets/PN2222-D.pdf}
+        \item \vspace{-8pt}
+        \href{https://www.vishay.com/docs/88503/1n4001.pdf}
+        {https://www.vishay.com/docs/88503/1n4001.pdf}
+        \item \vspace{-8pt}
+        \href{https://www.onsemi.com/pdf/datasheet/tip120-d.pdf}
+        {https://www.onsemi.com/pdf/datasheet/tip120-d.pdf}
+    \end{enumerate}
+    \hwline
+\end{homeworkProblem}
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{homeworkProblem}{}
+    \subsection{11 Diagrams + Pseudocode}
+
+    Keystrokes and KPS Arduino:
+    \img{0.5}{ryan.png}
+    \hwline
+    Photoresistor Array Arduino:
+    \img{0.4}{john.png}
+    \hwline
+
+    \pagebreak
+
+    Keystrokes and KPS Arduino:
+    \begin{enumerate}
+        \item \vspace{-5pt}
+        Setup pins for both displays.
+        \item \vspace{-5pt}
+        Wait for start signal from RX pin to start.
+        \item \vspace{-5pt}
+        Loop until terminate signal read from RX.
+        \begin{enumerate}
+            \item \vspace{-5pt}
+            Check if serial has data, read a short from it.
+            \item \vspace{-5pt}
+            Using bitwise operators, get the KPS from the first 8 bits,
+            and get the key presses from the last 8 bits.
+            \item \vspace{-5pt}
+            Update displays with received data.
+        \end{enumerate}
+    \end{enumerate}
+    \hwline
+    Photoresistor Array Arduino (WIP, only 4 photoresistors for 4K):
+    \begin{minted}{cpp}
+const uint8_t  pinValues[] = {A0, A1, A2, A3, 7, 6, 5, 4};
+const uint16_t luxValues[] = {645, 665, 688, 597};
+uint32_t prevTime = 0, curTime;
+uint8_t  columnHits;
+
+
+void setup()
+{
+    Serial.begin(9600);
+    for (uint8_t i = 4; i < 8; ++i) {
+        pinMode(pinValues[i], OUTPUT);
+    }
+}
+
+
+void loop()
+{
+    curTime = millis();
+    if (curTime - prevTime < 20) { return; }
+    prevTime = curTime;
+
+    columnHits = 0;
+    for (uint8_t i = 0; i < 4; ++i)
+    {
+        if (analogRead(pinValues[i]) >= luxValues[i])
+        {
+            columnHits |= 1 << (3-i);
+            digitalWrite(pinValues[i+4], HIGH);
+        }
+        else {
+            digitalWrite(pinValues[i+4], LOW);
+        }
+    }
+    Serial.print(columnHits ? columnHits : 16);
+}        
+    \end{minted}
+    \hwline
+\end{homeworkProblem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
