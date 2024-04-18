@@ -119,7 +119,9 @@ Skip the `Building from source` section if you're using the Release binary.
 * `1x` 1K omh resistor
 * `WIP`
 
-<p align="right">[ <a href="#readme-top">↑ back to top ↑</a> ]</p>  
+<p align="right">
+  <sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
+</p>
 
 </table></tr></td>
 
@@ -130,7 +132,9 @@ WIP
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">[ <a href="#readme-top">↑ back to top ↑</a> ]</p>  
+<p align="right">
+  <sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
+</p>
 
 <!-- LICENSE -->
 ## License
@@ -139,7 +143,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 Distributed under the GNU General Public License v3.0. See `LICENSE.txt` for more information.
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-<p align="right">[ <a href="#readme-top">↑ back to top ↑</a> ]</p>  
+<p align="right">
+  <sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
+</p>
 </table></tr></td>
 
 
@@ -149,14 +155,15 @@ Distributed under the GNU General Public License v3.0. See `LICENSE.txt` for mor
 <table><tr><td>
 
 If something needs my direct attention, please message me using the following connections.
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 
 <h1></h1>
 
 * `Discord` typeRYOON
 * `Email` typeRYOON@proton.me
-
-<p align="right">[ <a href="#readme-top">↑ back to top ↑</a> ]</p>  
+<p align="right">
+  <sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
+</p>
 </table></tr></td>
 
 
