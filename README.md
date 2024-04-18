@@ -75,7 +75,7 @@ Skip the `Building from source` section if you're using the Release binary.
 2. Open `CMakeLists.txt` in Qt Creator to open the project.
    ```
    - Please make sure you're using Qt 6.6.2+.
-   - Install additional Qt libraries Qt::WebSockets and Qt::SerialPort in the 
+   - Install additional libraries Qt::WebSockets and Qt::SerialPort in the Qt Maintenance Tool.
    ```
 3. Build the Debug Build in Qt Creator.
 4. In your base Qt folder run `windeployqt6.exe`  
