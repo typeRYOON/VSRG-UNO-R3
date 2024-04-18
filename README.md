@@ -129,40 +129,60 @@ B -- I2C Wire--> C
 <p align="right">
   <sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
 </p>
-
 </table></tr></td>
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-WIP
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<table><tr><td>
 
+<br>
+
+> [!IMPORTANT]
+> Make sure to set your 4, 5, 6, and 7 keys in game.  
+> Please make sure to have an osu! account, this program needs a user's osu!.config file to read from.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+<h1></h1>
+
+> - Have `osu!` open already. ([download](https://osu.ppy.sh/home/download))
+> - Open `VSRG-UNO-R3.exe`.
+> - If you're planning to use Arduino features open the settings page via the top button.
+>   - In the port area there are two port entries, enter the COM port(s) that your Arduino are connected to.
+>     - (e.g. `COM3`, `COM4`, check Arduino IDE)
+>   - Click on the green refresh button, this will assign the ports.
+>     - AP stands for Autoplayer (Arduino 1).
+>     - KS/KPS stands for Key-strokes (Arduino 2).
+> - Now click on the features you'd like to run for the current beatmap.
+>   - AP will auto-play the current beatmap.
+>   - KS will show the key strokes as an animation.
+>   - KPS will show the keys per second.
+> - Click on the Run button, this will put you into a ready state.
+>   - If you press H, the selection will start running.
+>   - If you press J or the terminate button, this will terminate the selection early.
+>     - The current selection will terminate when you exit to the menu or enter the results screen.
+> - The message box in the bottom left will show you the current state.
+> - The generation history is to the right of the message box.
 <p align="right">
   <sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
 </p>
+</table></tr></td>
 
 <!-- LICENSE -->
 ## License
 
 <table><tr><td>
 
-Distributed under the GNU General Public License v3.0. See `LICENSE.txt` for more information.
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+Distributed under the GNU General Public License v3.0. See `LICENSE.txt` for more information.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
 <p align="right">
   <sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
 </p>
 </table></tr></td>
-
 
 <!-- CONTACT -->
 ## Contact
 
 <table><tr><td>
 
-If something needs my direct attention, please message me using the following connections.
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+If something needs my direct attention, please message me using the following connections.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
 
 <h1></h1>
 
