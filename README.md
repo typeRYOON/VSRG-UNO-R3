@@ -22,7 +22,7 @@
 
 <p align="center">
   <a href="#installation">Installation</a> •
-  <a href="#updating">Hardware</a> •
+  <a href="#hardware">Hardware</a> •
   <a href="#features">Features</a> •
   <a href="#symbols">Symbols</a> •
   <a href="#binds">Binds</a> •
@@ -64,7 +64,7 @@ Skip the `Building from source` section if you're using the Release binary.
 
 ### Prerequisites  
 * `Windows` : This project only works on Windows due to the usage of `Windows.h`.  
-* `Arduino hardware` : Some hardware listed [below](#arduino-hardware) (only if you want to use Arduino features).
+* `Arduino hardware` : Some hardware listed [below](#hardware) (only if you want to use Arduino features).
 
 ### Building from source
 
