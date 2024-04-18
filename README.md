@@ -56,10 +56,10 @@ mollit anim id est laborum.<h1></h1><br>
 <!-- Installation -->
 <table><tr><td>  
 
-## Installation&emsp;
+## Installation;
 Go over to Releases and download `VSRG-UNO-R3.zip` or `VSRG-UNO-R3.7z`.  
 Skip the `Building from source` section if you're using the Release binary.
-
+<h1></h1>
 
 ### Prerequisites  
 * `Windows` : This project only works on Windows due to the usage of `Windows.h`.  
