@@ -22,7 +22,7 @@
 
 <p align="center">
   <a href="#installation">Installation</a> •
-  <a href="#updating">Updating</a> •
+  <a href="#updating">Hardware</a> •
   <a href="#features">Features</a> •
   <a href="#symbols">Symbols</a> •
   <a href="#binds">Binds</a> •
@@ -56,7 +56,7 @@ mollit anim id est laborum.<h1></h1><br>
 <!-- Installation -->
 <table><tr><td>  
 
-## Installation;
+## Installation
 Go over to Releases and download `VSRG-UNO-R3.zip` or `VSRG-UNO-R3.7z`.  
 Skip the `Building from source` section if you're using the Release binary.
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
@@ -89,9 +89,15 @@ Skip the `Building from source` section if you're using the Release binary.
 </p>
 </table></tr></td>  
 
-## Arduino Hardware  
-> The projects allows you to use 0, 1, or both Arduino microcontrollers at once.  
-> Build the below configurations depending on your materials and wanted Arduino features.  
+<table><tr><td>
+
+## Hardware
+> [!NOTE]
+> This project allows you to use 0, 1, or both Arduino microcontrollers at once.  
+> Build the below configurations depending on your materials and wanted Arduino features.      
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+<h1></h1>     
 
 ### Arduino 1: Autoplayer  
 * `4x` Photoresistor
@@ -114,6 +120,9 @@ Skip the `Building from source` section if you're using the Release binary.
 * `WIP`
 
 <p align="right">[ <a href="#readme-top">↑ back to top ↑</a> ]</p>  
+
+</table></tr></td>
+
 
 <!-- USAGE EXAMPLES -->
 ## Usage
