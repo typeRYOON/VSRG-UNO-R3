@@ -94,6 +94,13 @@ Skip the `Building from source` section if you're using the Release binary.
 > [!NOTE]
 > This project allows you to use 0, 1, or both Arduino microcontrollers at once.  
 > Build the below configurations depending on your materials and wanted Arduino features.      
+```mermaid
+flowchart LR
+B(Arduino 1 <AP>) -- USB Serial --> A(Computer Program)
+A -- USB Serial --> C(Arduino 2 <KPS/KS>)
+B -- I2C Wire--> C
+```
+
 
 <h1></h1>     
 
@@ -165,16 +172,3 @@ If something needs my direct attention, please message me using the following co
   <sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
 </p>
 </table></tr></td>
-
-
-```mermaid
-flowchart LR
-B(Arduino 1 <AP>) -- USB Serial --> A(Computer Program)
-A -- USB Serial --> C(Arduino 2 <KPS/KS>)
-B -- I2C Wire--> C
-```
-
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
-
