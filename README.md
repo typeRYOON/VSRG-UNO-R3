@@ -95,7 +95,6 @@ Skip the `Building from source` section if you're using the Release binary.
 > [!NOTE]
 > This project allows you to use 0, 1, or both Arduino microcontrollers at once.  
 > Build the below configurations depending on your materials and wanted Arduino features.      
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 
 <h1></h1>     
 
@@ -108,6 +107,8 @@ Skip the `Building from source` section if you're using the Release binary.
 * `1x` Breadboard
 * `1x` Serial cable
 * Supplements: wires (extensions, double sided), tape, styrofoam
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<h1></h1>
 
 ### Arduino 2: Key-strokes / Keys per second display
 * `2x` 10K Ohm potentiometer  
