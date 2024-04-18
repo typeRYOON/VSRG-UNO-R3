@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 <h1 align="center">
   <br>
-  <a href="https://github.com/typeRYOON/VSRG-UNO-R3/"><img src="https://raw.githubusercontent.com/typeRYOON/VSRG-UNO-R3/master/res/github/VSRG-UNO-R3-Banner.svg" alt="Preview"></a>
+  <a href="https://github.com/typeRYOON/VSRG-UNO-R3/"><img src="https://raw.githubusercontent.com/typeRYOON/VSRG-UNO-R3/master/res/github/banner.svg" alt="Preview"></a>
 </h1>
 
 <h4 align="center">Arduino VSRG Auto Player w/ Stats Display!</h4>
@@ -39,28 +39,27 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<h1 align="center">
-  <br>
+<table>
+<tr>
+<td>
+
+**VSRG-UNO-R3** is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+mollit anim id est laborum.<h1></h1><br>
+<p align="center">
   <a href="https://github.com/typeRYOON/VSRG-UNO-R3/">
-    <img src="https://raw.githubusercontent.com/typeRYOON/VSRG-UNO-R3/master/res/github/preview.gif" alt="Preview">
+    <img src="res/github/preview.gif" alt="Preview" width="800" height="450"/>
   </a>
-  
-</h1>
+</p>
+<p align="right">
+<sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
+</p>
 
-Here's a blank template to get started:
+</table>
+</tr>
+</td>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Built With
-
-* [![Qt][Qt]][Qt-url]
-* [![C++][C++]][C++-url]
-* [![LaTex][LaTeX]][LaTeX-url]
-* [![Arduino][Arduino]][Arduino-url]
-* [![Windows][Windows]][Windows-url]  
-* [![Markdown][Markdown]][Markdown-url]  
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -96,7 +95,7 @@ Skip the `Building from source` section if you're using the Release binary.
    cd C:/Qt/6.6.2/mingw_64/bin
    windeployqt6 "%PATH_TO_BUILD_EXE_DIR%"
    ```
-<p align="right">(<a href="#readme-top">back to top</a>)</p>  
+<p align="right">[ <a href="#readme-top">↑ back to top ↑</a> ]</p>  
 
 ## Arduino Hardware  
 > The projects allows you to use 0, 1, or both Arduino microcontrollers at once.  
@@ -122,7 +121,7 @@ Skip the `Building from source` section if you're using the Release binary.
 * `1x` 1K omh resistor
 * `WIP`
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">[ <a href="#readme-top">↑ back to top ↑</a> ]</p>  
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -130,14 +129,14 @@ WIP
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">[ <a href="#readme-top">↑ back to top ↑</a> ]</p>  
 
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">[ <a href="#readme-top">↑ back to top ↑</a> ]</p>  
 
 
 
@@ -148,7 +147,7 @@ Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - typeRYOON@pm
 
 Project Link: [https://github.com/typeRYOON/VSRG-UNO-R3](https://github.com/typeRYOON/VSRG-UNO-R3)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">[ <a href="#readme-top">↑ back to top ↑</a> ]</p>  
 
 
 
@@ -159,7 +158,7 @@ Project Link: [https://github.com/typeRYOON/VSRG-UNO-R3](https://github.com/type
 * []()
 * []()
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">[ <a href="#readme-top">↑ back to top ↑</a> ]</p>  
 
 
 ```mermaid
