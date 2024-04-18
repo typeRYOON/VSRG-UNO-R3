@@ -34,7 +34,6 @@
   <a href="#license">License</a>
 </p>
 
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <table><tr><td>  
@@ -54,9 +53,11 @@ mollit anim id est laborum.<h1></h1><br>
 </table></tr></td>
 
 <!-- Installation -->
+## Installation
 <table><tr><td>  
 
-## Installation
+<br>
+
 Go over to Releases and download `VSRG-UNO-R3.zip` or `VSRG-UNO-R3.7z`.  
 Skip the `Building from source` section if you're using the Release binary.
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
@@ -89,9 +90,9 @@ Skip the `Building from source` section if you're using the Release binary.
 </p>
 </table></tr></td>  
 
+## Hardware
 <table><tr><td>
 
-## Hardware
 > [!NOTE]
 > This project allows you to use 0, 1, or both Arduino microcontrollers at once.  
 > Build the below configurations depending on your materials and wanted Arduino features.      
