@@ -60,8 +60,11 @@ This program was created for CS362 at the University of Illinois Chicago.
 ## Installation
 <table><tr><td>  
 
-Go over to [`Releases`](https://github.com/typeRYOON/VSRG-UNO-R3/releases) and download `VSRG-UNO-R3.zip` or `VSRG-UNO-R3.7z`.  
-Skip the `Building from source` section if you're using the Release binary.
+<br>
+
+> [!NOTE]
+> Go over to [`Releases`](https://github.com/typeRYOON/VSRG-UNO-R3/releases) and download `VSRG-UNO-R3.zip` or `VSRG-UNO-R3.7z`.  
+> Skip the `Building from source` section if you're using the Release binary.
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 <h1></h1>
 
