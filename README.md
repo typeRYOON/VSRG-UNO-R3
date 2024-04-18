@@ -37,10 +37,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+<table><tr><td>  
 
-
-
-<table "><tr><td>
 **VSRG-UNO-R3** is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
 aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
 mollit anim id est laborum.<h1></h1><br>
@@ -55,29 +53,18 @@ mollit anim id est laborum.<h1></h1><br>
 
 </table></tr></td>
 
-<!-- GETTING STARTED -->
-## Getting Started
-<table><tr><td>
-This is an example of how you may give instructions on setting up your project locally.  
+<!-- Installation -->
+<table><tr><td>  
 
-To get a local copy up and running follow these steps.
-
+## Installation&emsp;
+Go over to Releases and download `VSRG-UNO-R3.zip` or `VSRG-UNO-R3.7z`.  
+Skip the `Building from source` section if you're using the Release binary.
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<h1></h1>
 
 ### Prerequisites  
 * `Windows` : This project only works on Windows due to the usage of `Windows.h`.  
 * `Arduino hardware` : Some hardware listed [below](#arduino-hardware) (only if you want to use Arduino features).
-
-<a href="https://github.com/typeRYOON/VSRG-UNO-R3/"><img src="res/github/stretch.png"></a>
-<p align="right">
-  <sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
-</p>
-
-</table></tr></td>
-
-
-## Installation
-Go over to Releases and download `VSRG-UNO-R3.zip` or `VSRG-UNO-R3.7z`.  
-Skip the `Building from source` section if you're using the Release binary.
 
 ### Building from source
 
@@ -97,7 +84,10 @@ Skip the `Building from source` section if you're using the Release binary.
    cd C:/Qt/6.6.2/mingw_64/bin
    windeployqt6 "%PATH_TO_BUILD_EXE_DIR%"
    ```
-<p align="right">[ <a href="#readme-top">↑ back to top ↑</a> ]</p>  
+<p align="right">
+  <sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
+</p>
+</table></tr></td>  
 
 ## Arduino Hardware  
 > The projects allows you to use 0, 1, or both Arduino microcontrollers at once.  
