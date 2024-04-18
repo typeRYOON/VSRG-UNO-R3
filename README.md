@@ -21,9 +21,9 @@
 </p>
 
 <p align="center">
+  <a href="#about-the-project">About</a> •
   <a href="#installation">Installation</a> •
   <a href="#hardware">Hardware</a> •
-  <a href="#features">Features</a> •
   <a href="#symbols">Symbols</a> •
   <a href="#binds">Binds</a> •
   <a href="#wiki">Wiki</a> •
@@ -55,8 +55,6 @@ mollit anim id est laborum.<h1></h1><br>
 <!-- Installation -->
 ## Installation
 <table><tr><td>  
-
-<br>
 
 Go over to Releases and download `VSRG-UNO-R3.zip` or `VSRG-UNO-R3.7z`.  
 Skip the `Building from source` section if you're using the Release binary.
@@ -137,31 +135,29 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+<table><tr><td>
 
+Distributed under the GNU General Public License v3.0. See `LICENSE.txt` for more information.
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 <p align="right">[ <a href="#readme-top">↑ back to top ↑</a> ]</p>  
-
+</table></tr></td>
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - typeRYOON@pm.me
+<table><tr><td>
 
-Project Link: [https://github.com/typeRYOON/VSRG-UNO-R3](https://github.com/typeRYOON/VSRG-UNO-R3)
+If something needs my direct attention, please message me using the following connections.
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 
-<p align="right">[ <a href="#readme-top">↑ back to top ↑</a> ]</p>  
+<h1></h1>
 
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
+* `Discord` typeRYOON
+* `Email` typeRYOON@proton.me
 
 <p align="right">[ <a href="#readme-top">↑ back to top ↑</a> ]</p>  
+</table></tr></td>
 
 
 ```mermaid
@@ -175,19 +171,3 @@ $$
 \Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
 $$
 
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[product-screenshot]: images/screenshot.png  
-[Qt]: https://img.shields.io/badge/Qt-%23217346.svg?style=for-the-badge&logo=Qt&logoColor=white  
-[Qt-url]: https://www.qt.io/  
-[C++]: https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white  
-[C++-url]: https://isocpp.org/  
-[LaTeX]: https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white  
-[LaTeX-url]: https://www.latex-project.org/  
-[Markdown]: https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white  
-[Markdown-url]: https://www.markdownguide.org/  
-[Windows]: https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white  
-[Windows-url]: https://www.microsoft.com/en-us/windows
-[Arduino]: https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white  
-[Arduino-url]: https://www.arduino.cc/  
