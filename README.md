@@ -26,7 +26,7 @@
   <a href="#prerequisites">Prerequisites</a> •
   <a href="#building-from-source">Building</a> •
   <a href="#hardware">Hardware</a> •
-  <a href="docs">Documents</a> •
+  <a href="doc">Documents</a> •
   <a href="#dependencies">Dependencies</a> •
   <a href="#license">License</a> •
   <a href="#contact">Contact</a>
