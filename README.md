@@ -1,96 +1,55 @@
 <a name="readme-top"></a>
+<h1 align="center">
+  <br>
+  <a href="https://github.com/typeRYOON/VSRG-UNO-R3/"><img src="https://raw.githubusercontent.com/typeRYOON/VSRG-UNO-R3/master/res/github/VSRG-UNO-R3-Banner.svg" alt="Preview"></a>
+</h1>
 
-```mermaid
-flowchart LR
-B(Arduino 1 <AP>) -- USB Serial --> A(Computer Program)
-A -- USB Serial --> C(Arduino 2 <KPS/KS>)
-B -- I2C Wire--> C
-```
+<h4 align="center">Arduino VSRG Auto Player w/ Stats Display!</h4>
 
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
+<p align="center">
+    <a href="https://github.com/typeRYOON/VSRG-UNO-R3/commits/master">
+    <img src="https://img.shields.io/github/last-commit/typeRYOON/VSRG-UNO-R3.svg?style=flat-square&logo=github&logoColor=white"
+         alt="GitHub last commit">
+    <a href="https://github.com/typeRYOON/VSRG-UNO-R3/issues">
+    <img src="https://img.shields.io/github/issues-raw/typeRYOON/VSRG-UNO-R3.svg?style=flat-square&logo=github&logoColor=white"
+         alt="GitHub issues">
+    <a href="https://github.com/typeRYOON/VSRG-UNO-R3/pulls">
+    <img src="https://img.shields.io/github/issues-pr-raw/typeRYOON/VSRG-UNO-R3.svg?style=flat-square&logo=github&logoColor=white"
+         alt="GitHub pull requests">
+    <a href="https://github.com/typeRYOON/VSRG-UNO-R3/blob/master/LICENSE.md">
+    <img src="https://img.shields.io/github/license/typeRYOON/VSRG-UNO-R3.svg?style=flat-square&logo=github&logoColor=white"
+         alt="GitHub License">
+</p>
 
-<!-- PROJECT SHIELDS -->
-<div align="center">
-  <a href="https://github.com/typeRYOON/VSRG-UNO-R3/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/typeRYOON/VSRG-UNO-R3.svg?style=for-the-badge">
-  </a>
-  <a href="https://github.com/typeRYOON/VSRG-UNO-R3/stargazers">
-    <img src="https://img.shields.io/github/stars/typeRYOON/VSRG-UNO-R3.svg?style=for-the-badge">
-  </a>
-  <a href="https://github.com/typeRYOON/VSRG-UNO-R3/issues">
-    <img src="https://img.shields.io/github/issues/typeRYOON/VSRG-UNO-R3.svg?style=for-the-badge">
-  </a>
-  <a href="https://github.com/typeRYOON/VSRG-UNO-R3/blob/master/LICENSE.md">
-    <img src="https://img.shields.io/github/license/typeRYOON/VSRG-UNO-R3.svg?style=for-the-badge">
-  </a>
-</div>
-
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/typeRYOON/VSRG-UNO-R3">
-    <img src="res/github/logo.jpg" alt="Logo" width="80" height="80">
-  </a>
-
-<h3 align="center">VSRG-UNO-R3</h3>
-
-  <p align="center">
-    Arduino VSRG Auto Player w/ Stats Display!
-    <br />
-    <a href="https://github.com/typeRYOON/VSRG-UNO-R3/tree/main/docs"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/typeRYOON/VSRG-UNO-R3">View Demo</a>
-    ·
-    <a href="https://github.com/typeRYOON/VSRG-UNO-R3/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/typeRYOON/VSRG-UNO-R3/issues">Request Feature</a>
-  </p>
-</div>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
+<p align="center">
+  <a href="#installation">Installation</a> •
+  <a href="#updating">Updating</a> •
+  <a href="#features">Features</a> •
+  <a href="#symbols">Symbols</a> •
+  <a href="#binds">Binds</a> •
+  <a href="#wiki">Wiki</a> •
+  <a href="#contributing">Contributing</a> •
+  <a href="#deprecated">Deprecated</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#support">Support</a> •
+  <a href="#license">License</a>
+</p>
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<h1 align="center">
+  <br>
+  <a href="https://github.com/typeRYOON/VSRG-UNO-R3/">
+    <img src="https://raw.githubusercontent.com/typeRYOON/VSRG-UNO-R3/master/res/github/preview.gif" alt="Preview">
+  </a>
+  
+</h1>
 
 Here's a blank template to get started:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 ### Built With
 
@@ -202,6 +161,17 @@ Project Link: [https://github.com/typeRYOON/VSRG-UNO-R3](https://github.com/type
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+```mermaid
+flowchart LR
+B(Arduino 1 <AP>) -- USB Serial --> A(Computer Program)
+A -- USB Serial --> C(Arduino 2 <KPS/KS>)
+B -- I2C Wire--> C
+```
+
+$$
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+$$
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
