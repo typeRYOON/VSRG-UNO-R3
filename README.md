@@ -1,6 +1,15 @@
 <a name="readme-top"></a>
 
+```mermaid
+flowchart LR
+B(Arduino 1 <AP>) -- USB Serial --> A(Computer Program)
+A -- USB Serial --> C(Arduino 2 <KPS/KS>)
+B -- I2C Wire--> C
+```
 
+$$
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+$$
 
 <!-- PROJECT SHIELDS -->
 <div align="center">
