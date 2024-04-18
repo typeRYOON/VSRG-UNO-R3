@@ -140,7 +140,13 @@ B -- I2C Wire--> C
 
 > [!IMPORTANT]
 > Make sure to set your 4, 5, 6, and 7 keys in game.  
+> Please install the .ttf font [file](res/osu!/NotoSansJP-Regular.ttf).  
 > Please make sure to have an osu! account, this program needs a user's osu!.config file to read from.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+
+> [!NOTE]
+> Please use the given osu skin, especially for the Arduino autoplayer. ([here](res/osu!/VSRG-UNO-R3.osk))  
+> [Here](res/osu!/Beatmaps.txt) are some test beatmaps.  
+
 <h1></h1>
 
 > - Have `osu!` open already. ([download](https://osu.ppy.sh/home/download))
