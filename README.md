@@ -60,7 +60,7 @@ mollit anim id est laborum.<h1></h1><br>
 Go over to Releases and download `VSRG-UNO-R3.zip` or `VSRG-UNO-R3.7z`.  
 Skip the `Building from source` section if you're using the Release binary.
 
-<img src="res/github/stretch.png"/>
+<img src="res/github/stretch.png" style="width:100%"/>
 <h1></h1>
 
 ### Prerequisites  
