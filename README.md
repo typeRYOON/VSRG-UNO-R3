@@ -23,24 +23,28 @@
 <p align="center">
   <a href="#about-the-project">About</a> •
   <a href="#installation">Installation</a> •
+  <a href="#prerequisites">Prerequisites</a> •
+  <a href="#building-from-source">Building</a> •
   <a href="#hardware">Hardware</a> •
-  <a href="#symbols">Symbols</a> •
-  <a href="#binds">Binds</a> •
-  <a href="#wiki">Wiki</a> •
-  <a href="#contributing">Contributing</a> •
-  <a href="#deprecated">Deprecated</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#support">Support</a> •
-  <a href="#license">License</a>
+  <a href="docs">Documents</a> •
+  <a href="#dependencies">Dependencies</a> •
+  <a href="#license">License</a> •
+  <a href="#contact">Contact</a>
 </p>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <table><tr><td>  
 
-**VSRG-UNO-R3** is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-mollit anim id est laborum.<h1></h1><br>
+**VSRG-UNO-R3** is a _hack_ and _stats display_ for **osu!mania** that has an Arduino microcontroller extension that you can optionally build. You can customize the configuration you'd like to run
+in the custom GUI that was built for this program.
+
+The GUI lets you bind to specific serial ports for transmission to and from the optionally built Arduino microcontrollers. The auto playing hack allows for 4, 5, 6, and 7 key gameplay
+to be automated.
+
+There are displays that you can turn on, they show your keys per second and key strokes as you play. Each Arduino feature has a computer version, allowing you to use whichever one you'd like.
+This program was created for CS362 at the University of Illinois Chicago.
+<h1></h1><br>
 <p align="center">
   <a href="https://github.com/typeRYOON/VSRG-UNO-R3/">
     <img src="res/github/preview.gif" alt="Preview" width="800" height="450"/>
@@ -56,7 +60,7 @@ mollit anim id est laborum.<h1></h1><br>
 ## Installation
 <table><tr><td>  
 
-Go over to Releases and download `VSRG-UNO-R3.zip` or `VSRG-UNO-R3.7z`.  
+Go over to [`Releases`](https://github.com/typeRYOON/VSRG-UNO-R3/releases) and download `VSRG-UNO-R3.zip` or `VSRG-UNO-R3.7z`.  
 Skip the `Building from source` section if you're using the Release binary.
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 <h1></h1>
@@ -77,7 +81,7 @@ Skip the `Building from source` section if you're using the Release binary.
    - Please make sure you're using Qt 6.6.2+.
    - Install additional libraries Qt::WebSockets and Qt::SerialPort in the Qt Maintenance Tool.
    ```
-3. Build the Debug Build in Qt Creator.
+3. Build the Release Build in Qt Creator.
 4. In your base Qt folder run `windeployqt6.exe`  
    ```sh
    cd C:/Qt/6.6.2/mingw_64/bin
@@ -90,6 +94,7 @@ Skip the `Building from source` section if you're using the Release binary.
 
 ## Hardware
 <table><tr><td>
+<br>
 
 > [!NOTE]
 > This project allows you to use 0, 1, or both Arduino microcontrollers at once.  
@@ -101,14 +106,13 @@ A -- USB Serial --> C(Arduino 2 <KPS/KS>)
 B -- I2C Wire--> C
 ```
 
-
 <h1></h1>     
 
 ### Arduino 1: Autoplayer  
-* `4x` Photoresistor
-* `4x` 10K ohm resistors
-* `4x` LEDs
-* `4x` 220 ohm resistors
+* `4x-7x` Photoresistors
+* `4x-7x` 10K ohm resistors
+* `4x-7x` LEDs
+* `4x-7x` 220 ohm resistors
 * `1x` Arduino Uno R3
 * `1x` Breadboard
 * `1x` Serial cable
@@ -124,7 +128,6 @@ B -- I2C Wire--> C
 * `1x` 220 ohm resistor
 * `1x` 330 ohm resistor
 * `1x` 1K omh resistor
-* `WIP`
 
 <p align="right">
   <sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
@@ -172,12 +175,34 @@ B -- I2C Wire--> C
 </p>
 </table></tr></td>
 
+<!-- DEPENDENCIES -->
+## Dependencies
+
+<table><tr><td>
+<br>
+
+> [!NOTE]
+> You don't need to install anything.  
+> The following software is used.
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+<h1></h1>
+
+- [`gosumemory`](https://github.com/l3lackShark/gosumemory)
+- [`Qt6`](https://www.qt.io/product/qt6)  
+
+
+<p align="right">
+  <sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
+</p>
+</table></tr></td>
+
 <!-- LICENSE -->
 ## License
 
 <table><tr><td>
 
-Distributed under the GNU General Public License v3.0. See `LICENSE.txt` for more information.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+Distributed under the GNU General Public License v3.0. See [`LICENSE.md`](LICENSE.md) for more information.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <p align="right">
   <sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
 </p>
@@ -192,7 +217,7 @@ If something needs my direct attention, please message me using the following co
 
 <h1></h1>
 
-* `Discord` typeRYOON
+* `Discord` [typeRYOON](https://discord.com/)
 * `Email` typeRYOON@proton.me
 <p align="right">
   <sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
