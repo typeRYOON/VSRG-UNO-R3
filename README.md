@@ -84,11 +84,13 @@ This program was created for CS362 at the University of Illinois Chicago.
    - Please make sure you're using Qt 6.6.2+.
    - Install additional libraries Qt::WebSockets and Qt::SerialPort in the Qt Maintenance Tool.
    ```
-3. Build the Release Build in Qt Creator.
-4. In your base Qt folder run `windeployqt6.exe`  
+3. Select the release build in Qt Creator.
+4. Move folder `res` from the `VSRG-UNO-R3` folder to the created release folder.
+5. Build the Release executable in Qt Creator.
+6. In your release Qt folder run `windeployqt6.exe`.
    ```sh
    cd C:/Qt/6.6.2/mingw_64/bin
-   windeployqt6 "%PATH_TO_BUILD_EXE_DIR%"
+   windeployqt6 --release --no-translations --no-opengl-sw --no-quick-import "%RELEASE_DIR%"
    ```
 <p align="right">
   <sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
