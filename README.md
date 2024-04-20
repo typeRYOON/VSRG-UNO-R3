@@ -77,7 +77,7 @@ This program was created for CS362 at the University of Illinois Chicago.
 1. Clone the repo
    ```sh
    git clone https://github.com/typeRYOON/VSRG-UNO-R3.git
-   cd computer/GUI
+   cd computer
    ```
 2. Open `CMakeLists.txt` in Qt Creator to open the project.
    ```
@@ -85,7 +85,7 @@ This program was created for CS362 at the University of Illinois Chicago.
    - Install additional libraries Qt::WebSockets and Qt::SerialPort in the Qt Maintenance Tool.
    ```
 3. Select the release build in Qt Creator.
-4. Move folder `res` from the `VSRG-UNO-R3` folder to the created release folder.
+4. Move folder `res/res` from the root folder to the created release folder.
 5. Build the Release executable in Qt Creator.
 6. In your release Qt folder run `windeployqt6.exe`.
    ```sh
