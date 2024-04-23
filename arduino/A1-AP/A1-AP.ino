@@ -3,9 +3,9 @@
  >> Assignment details and provided code are created and owned by Patrick Troy.
  >> University of Illinois at Chicago - CS 362, Spring 2024
  >> --------------------------------------------------------------------------------------
- >> File    :: A2-AP.ino :: VSRG-UNO-R3: Arduino 1, Photoresistor Master I2C
+ >> File    :: A1-AP.ino :: VSRG-UNO-R3: Arduino 1, Photoresistor Master I2C
  >> Course  :: CS 362 (47019), SP24
- >> Author  :: John See
+ >> Author  :: John Ezra See
  >> UIN/nID :: 668942698 (jsee4)
  >> System  :: Windows 10 w/ Mingw-w64
  - -                               - -
@@ -77,5 +77,5 @@ void loop()
             digitalWrite(pinValues[i + 4], LOW);
         }
     }
-    Serial.print(columnHits ? columnHits : 0); // Semd to GUI.
+    Serial.print(columnHits ? columnHits : 0); // Send column mapping to GUI.
 }
