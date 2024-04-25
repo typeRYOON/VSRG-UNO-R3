@@ -68,7 +68,7 @@ void loop()
     {
         light = analogRead(pinValues[i]);
         if (buttonState == 0) light = 0; // If button state is OFF, photoresistor is OFF.
-        if (light >= luxValues[i])  j
+        if (light >= luxValues[i])
         {
             columnHits |= 1 << (i);
             digitalWrite(pinValues[i + 4], HIGH);
@@ -77,5 +77,5 @@ void loop()
             digitalWrite(pinValues[i + 4], LOW);
         }
     }
-    Serial.print(columnHits ? columnHits : 0); // Send column mapping to GUI.
+    Serial.print(columnHits); // Send column mapping to GUI.
 }
