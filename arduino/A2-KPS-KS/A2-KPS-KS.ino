@@ -69,13 +69,13 @@ const uint8_t Kurisu[] PROGMEM = { // 'Kurisu' bitmap :: 48x70px
 };
 
 // 16x2 display variables :: - -                                                       - -
-LiquidCrystal LCD(2, 3, 4, 5, 6, 7);
+LiquidCrystal LCD( 2, 3, 4, 5, 6, 7 );
 char s_KPS[9], s_KS[16]; // Top/Bottom row buffers.
 
 // Nokia 5110 display variables :: - -                                                 - -
-Adafruit_PCD8544 Nokia = Adafruit_PCD8544(8, 9, 10, 11, 12);
+Adafruit_PCD8544 Nokia = Adafruit_PCD8544( 8, 9, 10, 11, 12 );
 const uint8_t WIDTH = 14, HEIGHT = 48;
-uint8_t KS_Bits[WIDTH][HEIGHT] = {0}, drawIterations = 0;
+uint8_t KS_Bits[WIDTH][HEIGHT] = { 0 }, drawIterations = 0;
 int32_t rawKPS_KS, KS;
 
 // Program flow variables :: - -                                                       - -
@@ -85,89 +85,89 @@ bool draw = true, off = false;
 // Set up external devices + communication pipelines :: - -                            - -
 void setup()
 { // Set up the 16x2 LCD :: - -                                                        - -
-  LCD.begin(16, 2);
-  LCD.println("KPS :: 0        ");
-  LCD.print  ("                ");
+  LCD.begin( 16, 2 );
+  LCD.println( "KPS :: 0        " );
+  LCD.print  ( "                " );
 
   // Set up the Nokia 5110 LCD :: - -                                                  - -
   Nokia.begin();
-  Nokia.setContrast(50);
+  Nokia.setContrast( 50 );
   Nokia.clearDisplay();
-  Nokia.drawBitmap(10, -15, Kurisu, 48, 70, BLACK);
-  Nokia.drawBitmap(9 ,  0 , VSRG  , 10, 48, BLACK);
+  Nokia.drawBitmap( 10, -15, Kurisu, 48, 70, BLACK );
+  Nokia.drawBitmap( 9 ,  0 , VSRG  , 10, 48, BLACK );
   Nokia.display();
 
   // Set up the I2C wire connection :: - -                                             - -
-  Wire.begin(5);
-  Wire.onReceive(buttonPressed);
+  Wire.begin( 5 );
+  Wire.onReceive( buttonPressed );
 
   // Set up the 9600 baud rate serial USB connection :: - -                            - -
-  Serial.begin(9600);
+  Serial.begin( 9600 );
 }
 
 // Given a keystroke binary mapping, update the KS bitmap :: - -                       - -
-void updateBitmap(const int32_t KS)
+void updateBitmap( const int32_t KS )
 { // Shift values up :: - -                                                            - -
-  for (uint8_t x = 0; x < WIDTH; ++x) {
-    for (int8_t y = HEIGHT - 1; y >= 0; y -= 2)
+  for ( uint8_t x = 0; x < WIDTH; ++x ) {
+    for ( int8_t y = HEIGHT - 1; y >= 0; y -= 2 )
     {
-      KS_Bits[x][y-1] = KS_Bits[x][y-2];
-      KS_Bits[x][y]   = KS_Bits[x][y-1];
+      KS_Bits[x][y - 1] = KS_Bits[x][y - 2];
+      KS_Bits[x][y]     = KS_Bits[x][y - 1];
     }
   }
   // Add new 14x2px row to bottom of KS bitmap :: - -                                  - -
-  for (uint16_t i = 2, x = 0; i <= 128; i <<= 1)
+  for ( uint16_t i = 2, x = 0; i <= 128; i <<= 1 )
   {
-    KS_Bits[x][0]   = KS & i; // Note ::
+    KS_Bits[x]  [0] = KS & i; //  Note ::
     KS_Bits[x++][1] = KS & i; //  Each column is 2 pixels wide.
-    KS_Bits[x][0]   = KS & i; //  So we must increment x forward
+    KS_Bits[x]  [0] = KS & i; //  So we must increment x forward
     KS_Bits[x++][1] = KS & i; //  2 pixels for each loop iteration.
   }
 }
 
 // Draw current KS_Bits bitmap onto Nokia display :: - -                               - -
-void drawBitmap(const bool print) // 'print' turns drawing/clearing on/off.
+void drawBitmap( const bool print ) // 'print' turns drawing/clearing on/off.
 {
-  for (uint8_t x = 0; x < WIDTH; ++x) {
-    for (uint8_t y = 0; y < HEIGHT; ++y)
+  for ( uint8_t x = 0; x < WIDTH; ++x ) {
+    for ( uint8_t y = 0; y < HEIGHT; ++y )
     {
-      if (print && KS_Bits[x][y]) { Nokia.drawPixel(x+60, y, BLACK); }
-      else                        { Nokia.drawPixel(x+60, y, WHITE); }
+      if ( print && KS_Bits[x][y] ) { Nokia.drawPixel( x + 60, y, BLACK ); }
+      else                          { Nokia.drawPixel( x + 60, y, WHITE ); }
     }
   }
   Nokia.display();
 }
 
 // Given a raw binary mapping, retrieve the KPS and update the 16x2 display :: - -     - -
-void print16_2(const int32_t KPS)
+void print16_2( const int32_t KPS )
 { // First 10 bits are for KS, so get latter 22 bits:
-  sprintf(s_KPS, "%d       ", (KPS & 0xFFFFC00) >> 10);
+  sprintf( s_KPS, "%d       ", ( KPS & 0xFFFFC00 ) >> 10 );
 
   // Get KS mapping, bits 2-8:
-  for (int i = 2, j = 0; i <= 128; i <<= 1) {
+  for ( int i = 2, j = 0; i <= 128; i <<= 1 ) {
     s_KS[j++] = i & KPS ? '\xDB' : ' ';
   }
   // Update 16x2 display:
-  LCD.setCursor(7, 0);
-  LCD.print(s_KPS);
-  LCD.setCursor(0, 1);
-  LCD.print(s_KS);
+  LCD.setCursor( 7, 0 );
+  LCD.print( s_KPS );
+  LCD.setCursor( 0, 1 );
+  LCD.print( s_KS );
 }
 
 // Arduino 1 will send a number via I2C, changes display states :: - -                 - -
-void buttonPressed(int32_t _)
+void buttonPressed( int32_t _ )
 {
-  while (Wire.available()) {
+  while ( Wire.available() ) {
     int32_t i = Wire.read();
-    if (i) 
+    if ( i ) 
     { // Displays are now set to ON state:
-      LCD.setCursor(0, 0);
-      LCD.println("KPS :: 0        ");
-      LCD.print  ("                ");
+      LCD.setCursor( 0, 0 );
+      LCD.println( "KPS :: 0        " );
+      LCD.print  ( "                " );
       off = false;
     } else 
     { // Displays are now set to OFF state:
-      drawBitmap(false);
+      drawBitmap( false );
       LCD.clear();
       off = true;
     }
@@ -177,38 +177,38 @@ void buttonPressed(int32_t _)
 // Main Arduino loop, every 20ms there should be a serial value :: - -                 - -
 void loop()
 {
-  if (Serial.available())
+  if ( Serial.available() )
   { // Example :: "#12345678#"
-    String rawSerial = Serial.readStringUntil('#');
-    if (rawSerial.length() > 0) {
+    String rawSerial = Serial.readStringUntil( '#' );
+    if ( rawSerial.length() > 0 ) {
       rawSerial.trim();
       rawKPS_KS = rawSerial.toInt();
 
       // 0xFE = 0b11111110, 7 relevant key columns:
-      updateBitmap(rawKPS_KS & 0xFE);
+      updateBitmap( rawKPS_KS & 0xFE );
 
       // Displays are in off state, do not draw to them:
-      if (off) { return; }
+      if ( off ) { return; }
 
       // Only update Nokia LCD every 60ms, performance fix:
-      if (drawIterations++ == 3) {
+      if ( drawIterations++ == 3 ) {
         drawIterations = 0;
-        drawBitmap(true);
+        drawBitmap( true );
       }
-      print16_2(rawKPS_KS);
+      print16_2( rawKPS_KS );
       prev = millis();
       draw = true;
     }
   }
   // Clear displays if USB serial becomes inactive :: - -                              - -
   now = millis();
-  if (draw && now - prev >= 500)
+  if ( draw && now - prev >= 500 )
   {
     LCD.clear();
-    LCD.println("KPS :: 0        ");
-    LCD.print  ("                ");
-    drawBitmap(false);
+    LCD.println( "KPS :: 0        " );
+    LCD.print  ( "                " );
+    drawBitmap( false );
     draw = false;
     prev = now;
   }
-} // - -                                                                               - -
+} // :: - -                                                                            - -
