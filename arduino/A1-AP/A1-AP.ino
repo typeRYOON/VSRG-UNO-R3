@@ -45,7 +45,7 @@ void loop()
   curTime = millis();
   curButton = digitalRead( buttonPin );
 
-  if (curTime - prevTime < 20) { return; }
+  if ( curTime - prevTime < 20 ) { return; }
 
   // Debounce:
   if ( prevButton == LOW && curButton == HIGH ) {
