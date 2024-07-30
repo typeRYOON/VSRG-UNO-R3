@@ -22,60 +22,60 @@
 
 // Global variables :: - -                                                             - -
 int32_t light, buttonState = 1, buttonPin = 8, buttonStateOutput = 9;
-const uint8_t  pinValues[] = {A0, A1, A2, A3, 7, 6, 5, 4};
-const uint16_t luxValues[] = {550, 550, 550, 550}; // Calibrate as needed
-uint8_t columnHits, curButton = LOW, prevButton = LOW;
+const uint8_t  pinValues[] = { A0, A1, A2, A3, 7, 6, 5, 4 };
+const uint16_t luxValues[] = { 550, 550, 550, 550 }; // Calibrate as needed
+uint8_t  columnHits, curButton = LOW, prevButton = LOW;
 uint32_t prevTime = 0, curTime;
 
 // Set up all the pins :: - -                                                          - -
 void setup()
 {
-    Serial.begin(9600);
-    for (uint8_t i = 4; i < 8; ++i) {
-        pinMode(pinValues[i], OUTPUT);
-    }
-    pinMode(buttonPin, INPUT);  
-    pinMode(buttonStateOutput, OUTPUT);
-    Wire.begin();
+  Serial.begin( 9600 );
+  for ( uint8_t i = 4; i < 8; ++i ) {
+    pinMode( pinValues[i], OUTPUT );
+  }
+  pinMode( buttonPin, INPUT );  
+  pinMode( buttonStateOutput, OUTPUT );
+  Wire.begin();
 } 
 
 // Main Arduino program loop :: - -                                                    - -
 void loop()
 {
-    curTime = millis();
-    curButton = digitalRead(buttonPin);
+  curTime = millis();
+  curButton = digitalRead( buttonPin );
 
-    if (curTime - prevTime < 20) { return; }
+  if (curTime - prevTime < 20) { return; }
 
-    // Debounce
-    if (prevButton == LOW && curButton == HIGH) {
-      buttonState = !buttonState;
+  // Debounce:
+  if ( prevButton == LOW && curButton == HIGH ) {
+    buttonState = !buttonState;
 
-      // Send to Arduino 2 only when button is pressed:
-      // buttonState = 0 -> OFF
-      // buttonState = 1 -> ON
-      Wire.beginTransmission(5);
-      Wire.write(buttonState);
-      Wire.endTransmission();
-    }
+    // Send to Arduino 2 only when button is pressed:
+    // buttonState = 0 -> OFF
+    // buttonState = 1 -> ON
+    Wire.beginTransmission( 5 );
+    Wire.write( buttonState );
+    Wire.endTransmission();
+  }
 
-    prevTime = curTime;
-    prevButton = curButton;
+  prevTime   = curTime;
+  prevButton = curButton;
 
-    columnHits = 0;
-    // Read all photoresistors and write to LEDs :: - -                                - -
-    for (uint8_t i = 0; i < 4; ++i)
+  columnHits = 0;
+  // Read all photoresistors and write to LEDs :: - -                                  - -
+  for ( uint8_t i = 0; i < 4; ++i )
+  {
+    light = analogRead( pinValues[i] );
+    if ( buttonState == 0 ) { light = 0; } // If button is OFF, photoresistor is OFF.
+    if ( light >= luxValues[i] )
     {
-        light = analogRead(pinValues[i]);
-        if (buttonState == 0) light = 0; // If button state is OFF, photoresistor is OFF.
-        if (light >= luxValues[i])
-        {
-            columnHits |= 1 << (i);
-            digitalWrite(pinValues[i + 4], HIGH);
-        }
-        else {
-            digitalWrite(pinValues[i + 4], LOW);
-        }
+      columnHits |= 1 << i;
+      digitalWrite( pinValues[i + 4], HIGH );
     }
-    Serial.print(columnHits); // Send column mapping to GUI.
-}
+    else {
+      digitalWrite( pinValues[i + 4], LOW  );
+    }
+  }
+  Serial.print( columnHits ); // Send column mapping to GUI.
+} // :: - -                                                                            - -
