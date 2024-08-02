@@ -6,7 +6,7 @@
 <h4 align="center">Arduino VSRG Auto Player w/ Stats Display!</h4>
 
 <p align="center">
-    <a href="https://github.com/typeRYOON/VSRG-UNO-R3/commits/master">
+    <a href="https://github.com/typeRYOON/VSRG-UNO-R3/commits/main">
     <img src="https://img.shields.io/github/last-commit/typeRYOON/VSRG-UNO-R3.svg?style=flat-square&logo=github&logoColor=white"
          alt="GitHub last commit">
     <a href="https://github.com/typeRYOON/VSRG-UNO-R3/issues">
