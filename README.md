@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 <h1 align="center">
-  <a href="https://github.com/typeRYOON/VSRG-UNO-R3/"><img src="https://raw.githubusercontent.com/typeRYOON/VSRG-UNO-R3/master/res/github/banner.svg" alt="Preview"></a>
+  <a href="https://github.com/typeRYOON/VSRG-UNO-R3/"><img src="https://raw.githubusercontent.com/typeRYOON/VSRG-UNO-R3/master/res/github/banner.png" alt="Preview"></a>
 </h1>
 
 <h4 align="center">Arduino VSRG Auto Player w/ Stats Display!</h4>
