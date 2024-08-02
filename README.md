@@ -47,7 +47,7 @@ This program was created for CS362 at the University of Illinois Chicago.
 <h1></h1><br>
 <p align="center">
   <a href="https://github.com/typeRYOON/VSRG-UNO-R3/">
-    <img src="res/github/preview.gif" alt="Preview" width="800" height="450"/>
+    <img src="res/github/showcase.gif" alt="Preview" width="800" height="450"/>
   </a>
 </p>
 <p align="right">
