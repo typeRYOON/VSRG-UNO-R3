@@ -148,18 +148,18 @@ B -- I2C Wire--> C
 
 > [!IMPORTANT]
 > Make sure to set your 4, 5, 6, and 7 keys in game.  
-> Please install the .ttf font [file](res/osu!/NotoSansJP-Regular.ttf).  
+> Check the errors.txt file if you're curious about what errors are what.   
 > Please make sure to have an osu! account, this program needs a user's osu!.config file to read from.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
 
 > [!NOTE]
-> Please use the given osu skin, especially for the Arduino autoplayer. ([here](res/osu!/VSRG-UNO-R3.osk))  
+> Please use the given osu skin for the Arduino autoplayer. ([here](res/osu!/VSRG-UNO-R3.osk))  
 > [Here](res/osu!/Beatmaps.txt) are some test beatmaps.  
 
 <h1></h1>
 
 > - Have `osu!` open already. ([download](https://osu.ppy.sh/home/download))
 > - Open `VSRG-UNO-R3.exe`.
-> - If you're planning to use Arduino features open the settings page via the top button.
+> - If you're planning to use Arduino features open the settings page via the arduino button.
 >   - In the port area there are two port entries, enter the COM port(s) that your Arduino are connected to.
 >     - (e.g. `COM3`, `COM4`, check Arduino IDE)
 >   - Click on the green refresh button, this will assign the ports.
@@ -169,7 +169,7 @@ B -- I2C Wire--> C
 >   - AP will auto-play the current beatmap.
 >   - KS will show the key strokes as an animation.
 >   - KPS will show the keys per second.
-> - Click on the Run button, this will put you into a ready state.
+> - When ready, enter a beatmap and do the following:
 >   - If you press H, the selection will start running.
 >   - If you press J or the terminate button, this will terminate the selection early.
 >     - The current selection will terminate when you exit to the menu or enter the results screen.
