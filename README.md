@@ -49,6 +49,7 @@ This program was created for CS362 at the University of Illinois Chicago.
   <a href="https://github.com/typeRYOON/VSRG-UNO-R3/">
     <img src="res/github/showcase.gif" alt="Preview" width="800" height="450"/>
   </a>
+  <a href="https://www.youtube.com/watch?v=WKqHV_tVNM8"><img src="https://img.youtube.com/vi/WKqHV_tVNM8/0.jpg" alt="Showcase Video" width="800" height="450"></a>
 </p>
 <p align="right">
 <sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
