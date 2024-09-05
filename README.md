@@ -36,14 +36,14 @@
 ## About The Project
 <table><tr><td>  
 
-**VSRG-UNO-R3** is a _hack_ and _stats display_ for **osu!mania** that has an Arduino microcontroller extension that you can optionally build. You can customize the configuration you'd like to run
+**VSRG-UNO-R3** is a proof of concept _hack_ and _stats display_ for **osu!mania** that has an Arduino microcontroller extension that you can optionally build. You can customize the configuration you'd like to run
 in the custom GUI that was built for this program.
 
 The GUI lets you bind to specific serial ports for transmission to and from the optionally built Arduino microcontrollers. The auto playing hack allows for 4, 5, 6, and 7 key gameplay
 to be automated.
 
 There are displays that you can turn on, they show your keys per second and key strokes as you play. Each Arduino feature has a computer version, allowing you to use whichever one you'd like.
-This program was created for CS362 at the University of Illinois Chicago.
+This program was created for CS362 at the University of Illinois Chicago, this "hack" will get you banned if you use it on a osu server.
 <h1></h1><br>
 <p align="center">
   <a href="https://github.com/typeRYOON/VSRG-UNO-R3/">
