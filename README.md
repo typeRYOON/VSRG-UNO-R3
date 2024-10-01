@@ -83,7 +83,7 @@ This "hack" will get you banned if you use it on a osu server.
 2. Open `CMakeLists.txt` in Qt Creator to open the project.
    ```
    - Please make sure you're using Qt 6.6.2+.
-   - Install additional libraries Qt::WebSockets and Qt::SerialPort in the Qt Maintenance Tool.
+   - Install additional libraries: WebSockets, SerialPort, and PrintSupport in the Qt Maintenance Tool.
    ```
 3. Select the release build in Qt Creator.
 4. Move folder `res/res` from the root folder to the created release folder.
@@ -174,7 +174,7 @@ B -- I2C Wire--> C
 >   - If you press H, the selection will start running.
 >   - If you press J or the terminate button, this will terminate the selection early.
 >     - The current selection will terminate when you exit to the menu or enter the results screen.
-> - The message box in the bottom left will show you the current state.
+> - The message box in the bottom left will show you the current state/errors.
 > - The generation history is to the right of the message box.
 <p align="right">
   <sub>[ <a href="#readme-top">↑ back to top ↑</a> ]  </sub>
