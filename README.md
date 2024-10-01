@@ -83,7 +83,7 @@ This "hack" will get you banned if you use it on a osu server.
 2. Open `CMakeLists.txt` in Qt Creator to open the project.
    ```
    - Please make sure you're using Qt 6.6.2+.
-   - Install additional libraries: WebSockets, SerialPort, and PrintSupport in the Qt Maintenance Tool.
+   - Install libraries: WebSockets, SerialPort, & PrintSupport in the Qt Maintenance Tool.
    ```
 3. Select the release build in Qt Creator.
 4. Move folder `res/res` from the root folder to the created release folder.
