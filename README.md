@@ -43,7 +43,7 @@ The GUI lets you bind to specific serial ports for transmission to and from the 
 to be automated.
 
 There are displays that you can turn on, they show your keys per second and key strokes as you play. Each Arduino feature has a computer version, allowing you to use whichever one you'd like.
-This program was created for CS362 at the University of Illinois Chicago, this "hack" will get you banned if you use it on a osu server.
+This "hack" will get you banned if you use it on a osu server.
 <h1></h1><br>
 <p align="center">
   <a href="https://github.com/typeRYOON/VSRG-UNO-R3/">
